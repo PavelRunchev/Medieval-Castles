@@ -2,11 +2,12 @@
 # Site settings
 
 title: Medieval Castles
-email: pavel.runchev@gmail.com
 description: This is simple project with Jekyll!
+
+email: pavel.runchev@gmail.com
 baseurl: "/medieval-castles" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-skype: raidersgb
+
 twitter_username: PavelRunchev
 github_username:  PavelRunchev
 
