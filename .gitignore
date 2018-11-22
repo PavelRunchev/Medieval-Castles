@@ -1,0 +1,6 @@
+_site
+.sass-cache
+.jekyll-metadata
+.vscode
+package-lock.json
+node_modules

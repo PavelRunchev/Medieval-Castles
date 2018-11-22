@@ -1,0 +1,18 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+
+
+layout: site
+---
+
+<h2>View Posts</h2>
+<ul class="listing posts">
+	{% for post in site.posts %}
+	<li>
+		<a href="{{ site.baseurl }}{{ post.url }}">
+			<span class="title">{{ post.title }}</span>
+			<span class="date">{{ post.date | date_to_string }}</span>
+		</a>
+	</li>
+	{% endfor %}
+</ul>

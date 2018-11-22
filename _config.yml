@@ -1,0 +1,31 @@
+
+# Site settings
+
+title: Medieval Castles
+email: pavel.runchev@gmail.com
+description: This is simple project with Jekyll!
+baseurl: "/medieval-castles" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+skype: raidersgb
+twitter_username: PavelRunchev
+github_username:  PavelRunchev
+
+future: true
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+
+destination: docs
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - node_modules
+  - docs
+  - scss
+  - .vscode

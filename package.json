@@ -1,0 +1,30 @@
+{
+  "name": "medieval-castles",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.html",
+  "devDependencies": {
+    "browser-sync": "",
+    "csso": "",
+    "gulp": "",
+    "gulp-util": "",
+    "gulp-load-plugins": "",
+    "gulp-autoprefixer": "",
+    "gulp-changed": "",
+    "gulp-csso": "",
+    "gulp-htmlmin": "",
+    "gulp-inline-source": "",
+    "gulp-notify": "",
+    "gulp-plumber": "",
+    "gulp-sass": "",
+    "gulp-size": "",
+    "gulp-sourcemaps": ""
+  },
+  "repository": "https://github.com/PavelRunchev/Medieval-Castles.git",
+  "author": "RAIDERS",
+  "license": "MIT",
+  "bugs": "",
+  "dependencies": {
+    "eslint": "^5.9.0"
+  }
+}
