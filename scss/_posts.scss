@@ -1,0 +1,57 @@
+$color: lightgrey;
+
+@mixin blog-view {
+    width: 20%;
+    height: 15rem;
+    border: 2px solid rgb(217,75,107);
+    margin: 2.5rem 1rem 3.5rem 1rem;
+    padding-top: 3.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: bolder;
+    color: #FFF;
+    vertical-align: middle;
+    border-radius: 0.3rem;
+}
+
+
+.site-content {
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), 
+    url('../assets/1_id9bCc_0KQeIXu9FGfFkUQ.jpeg'), no-repeat, center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 3rem;
+
+    & h3 {
+        color: $color;
+        text-shadow: 2px 2px 4px rgba(0,0,0, 0.8);
+    }
+
+    & p {
+        font-style: italic;
+        color: $color;
+    }
+
+    & .listing.posts {
+        display: flex;
+        justify-content: space-around;
+
+        & li {
+            transition: background 0.3s ease-in, color 0.3s ease-in;
+            @include blog-view;
+    
+            a { span { color: $color; } }
+        }
+
+        & li:hover {
+            background: rgba(217, 75, 107, 0.5);
+            color: rgb(217,75,107);
+            border-color: grey;
+            text-shadow: 2px 2px 4px rgba(0,0,0, 1);
+        }
+    }
+
+    
+    
+
+    
+}

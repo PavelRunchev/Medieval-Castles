@@ -1,0 +1,90 @@
+@keyframes navitemin {
+    from {
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translate(0,0);
+    }
+}
+
+.navigation.main {
+    //background: linear-gradient(to right, rgba(0, 47, 150, 0.4), rgba(66, 51, 68, 0.4), rgba(0, 47, 150, 0.4));
+    background: lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & img {
+        margin: 0 2rem;
+        height: 4rem;
+    }
+
+    & > ul {
+        margin-right: 5rem;
+        display: inline-block;
+        transition: opacity 0.2s ease-out, transform 0.2s ease-in;
+        transform: translateX(2rem);
+
+
+        li {
+            display: inline-block;
+            padding: 1.5rem 0.5rem 0 0.5rem;
+            opacity: 0;
+            animation: navitemin 0.5s ease forwards;
+            transform: scale(0.1) translateX(0, 3rem);
+        }
+
+        a {
+            background: -webkit-linear-gradient( #000, #D94B6B);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            //color: #D94B6B;
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 0.4rem;
+            border: solid transparent;
+            border-width: 3px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0, 1);
+        }
+
+        a:hover {
+            background: none;
+            background-clip: unset;
+            -webkit-text-fill-color: unset;
+
+            color: #9766C2;
+            padding-top: 0.3rem;
+            font-weight: bold;
+            border-color: #9766C2;
+            text-shadow: 2px 2px 4px rgba(255,255,255, 1);
+        }
+    }
+
+    @for $i from 1 through 6 {
+        & li:nth-child(#{$i}) { animation-delay: $i * 0.15s; }
+    }
+
+    // .navigation.main a {
+    //     color: rgb(0, 189, 142);
+    //     display: block;
+    //     padding: 0.5rem 1rem;
+    //     text-decoration: none;
+    //     border-radius: 0.4rem;
+    //     border: solid transparent;
+    //     border-width: 2px 0;
+    //     text-shadow: 2px 2px 4px rgba(0,0,0, 1);
+    // }
+
+
+    // .site-header .navigation.main li:hover > a,
+    // .site-header .navigation.main a:hover {
+    // color: rgb(255,153,107);
+    // border-color: rgb(255,153,107);
+    // font-weight: bold;
+    // padding-top: 0.4rem;
+    // }
+}
+

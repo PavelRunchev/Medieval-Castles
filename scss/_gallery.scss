@@ -1,0 +1,215 @@
+@mixin global-ancher {
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid rgb(0,0,0);
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    max-width: 100%;
+    border-radius: 0.3rem;
+    width: 365px;
+}
+
+@mixin global-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    width: 100%;
+    height: 13.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.gallery-container {
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    padding: 2rem;
+    text-align: center;
+    & h3 {
+        color: #D94B6B;
+        text-shadow: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    }
+
+    & #gallery-paragraph {
+       color: black;
+       font-weight: bold;
+    }
+
+    & .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+        align-items: stretch;
+        justify-items: center;
+        margin: auto;
+        width: 80vw;
+
+        & .boldt-castle {
+            background-image: url('../assets/gallery/Boldt-Castle.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/Boldt-Castle.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .corvins-castle {
+            background-image: url('../assets/gallery/CorvinsCastle_Transylvania.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/CorvinsCastle_Transylvania.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .egeskov-castle {
+            background-image: url('../assets/gallery/Egeskov_Slot_spejling_Edit_2.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/Egeskov_Slot_spejling_Edit_2.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .frederiksborg-castle {
+            background-image: url('../assets/gallery/Frederiksborg_Castle_and_boat_crop.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/Frederiksborg_Castle_and_boat_crop.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .kilkenny-castle {
+            background-image: url('../assets/gallery/Kilkenny-castle.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/Kilkenny-castle.jpg'), no-repeat, center;
+                background-size: cover;
+                height: 13.5rem;
+            }
+        }
+
+        & .peles-castle {
+            background-image: url('../assets/gallery/Chateau_Peles.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/Chateau_Peles.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .jemeppe-castle {
+            background-image: url('../assets/gallery/chateaujemeppebr.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/chateaujemeppebr.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .prague-castle {
+            background-image: url('../assets/gallery/pragueCastle-1024x668.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/pragueCastle-1024x668.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .almourol-castle {
+            background-image: url('../assets/gallery/Almourol Castle.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/Almourol Castle.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .pena-palace {
+            background-image: url('../assets/gallery/pena-national-palace.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/pena-national-palace.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .vufflens-castle {
+            background-image: url('../assets/gallery/Vufflens-Castle.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/Vufflens-Castle.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+
+        & .hohenwerfen-palace {
+            background-image: url('../assets/gallery/hohenwerfen_castle.jpg');
+            background-size: cover;
+            @include global-ancher;
+            div { @include global-div; }
+
+            &:hover div {
+                opacity: 1;
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+                url('../assets/gallery/hohenwerfen_castle.jpg'), no-repeat, center;
+                background-size: cover;
+            }
+        }
+    }
+}

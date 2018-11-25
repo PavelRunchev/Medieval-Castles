@@ -1,0 +1,23 @@
+.site-header {
+    background: lightgrey;
+    text-align: center;
+
+    @at-root .site-title {
+        padding-bottom: 0;
+
+        font-family: 'Roboto', sans-serif;
+        a { 
+            background: -webkit-linear-gradient(#D94B6B, #000);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom: 4px solid black;
+            text-shadow: 5px 5px 3px 0px rgba(255,255,255,0.75);
+         }
+    }
+
+    @at-root .site-description { 
+        font-style: italic;
+        font-weight: bold;
+        color: black;
+     }
+}

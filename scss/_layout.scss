@@ -1,0 +1,27 @@
+
+.site {
+	width: 100%;
+	display: grid;
+    grid-template-columns: 12fr;
+    background: lightyellow;
+    justify-content: center;
+	grid-auto-flow: row dense;
+
+	& .site-navigation {
+		grid-column: 1 / -1;
+	}
+	
+	& header { 
+		grid-column: 1 / -1; 
+	}
+	& main { 
+		grid-column: 1 / -1;
+	}
+	& footer { 
+		grid-column: 1 / -1; 
+	}
+}
+
+
+
+

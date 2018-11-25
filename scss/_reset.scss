@@ -1,0 +1,16 @@
+
+
+/* Whitespace Reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Box-sizing fix */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
