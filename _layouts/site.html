@@ -9,8 +9,9 @@
 </head>
 <body class="{% if page.type %}{{page.type}} {% endif %}{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %}">
     <div class="site">
+        {% include navigation.html %}
 
-       {% include header.html %}
+        {% include header.html %}
 
         <main class="site-content">
                 {{ content }}

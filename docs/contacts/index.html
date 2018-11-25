@@ -9,25 +9,25 @@
 </head>
 <body class="contacts">
     <div class="site">
+        <nav class="navigation main">
+    <img src="../assets/castle-logo-design.png">
+    <ul>
+        <li><a href="/">Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/special-thanks/">Special Thanks</a></li>
+        <li><a href="/login/">Login</a></li>
+        <li><a href="/register/">Register</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+    </ul>
+</nav>
 
-       <header class="site-header">
+        <header class="site-header">
     <div class="site-branding">
-        <p class="site-title">
+        <h1 class="site-title">
             <a href="/">Medieval Castles</a>
-        </p>
+        </h1>
         <p class="site-description">This is simple project with Jekyll!</p>
     </div>
-
-    <nav class="navigation main">
-        <ul>
-            <li><a class="fas fa-newspaper" href="/">Blog</a></li>
-            <li><a class="fas fa-user-secret" href="/about/">About</a></li>
-            <li><a class="fas fa-envelope" href="/special-thanks/">Special Thanks</a></li>
-            <li><a class="fas fa-lock" href="/login/">Login</a></li>
-            <li><a class="fas fa-lock" href="/register/">Register</a></li>
-            <li><a class="fas fa-lock" href="/gallery/">Gallery</a></li>
-        </ul>
-    </nav>
 </header>
 
         <main class="site-content">
@@ -35,17 +35,63 @@
         </main>
 
         <footer class="site-footer">
-    <article>
-        <ul>
-            <li><a class="fas fa-lock" href="/contacts/">Contacts</a></li>
-            <li><a class="fas fa-lock" href="/support/">Support</a></li>
-            <li><a class="fas fa-lock" href="/services/">Services</a></li>
-        </ul>
-    </article>
-    <article>
-        <img src="/assets/github.png" alt="logo">
-    </article>
-    <p>&copy; 2018 Jekyll</p>
+    <section class="footer logo">
+        <img src="../assets/creative design.jpg" alt="logo">
+        <img src="../assets/logotipo-harmony.jpg" alt="logo">
+        <img src="../assets/colorwise-owl-creative-logo-designer.png" alt="logo">
+        <img src="../assets/phoenix-logo.jpg" alt="logo">
+    </section>
+
+    <section class="footer services">
+        <article class="contacts">
+                <h4>Contact us</h4>
+                <div class="avenue">
+                    <p><i class="fas fa-map-marker-alt"></i>&nbsp; Tintqva Avenue 15-17</p>
+                    <p>Sofia, 1113 BG.</p>
+                </div>
+                <div class="week">
+                    <p><i class="far fa-clock"></i>&nbsp; Mon - Sat 9.00 - 22.00 </p>
+                    <p>Sunday CLOSED</p>
+                </div>
+                <div class="phone">
+                    <p><i class="fas fa-phone"></i>&nbsp; 02 047 557 Free call</p>
+                </div>
+        </article>
+     
+        <article class="links">
+            <h4>Need help?</h4>
+            <ul>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/login/">My Account</a></li>
+                <li><a href="/contacts/">Contact Us</a></li>
+                <li><a href="/support/">Support</a></li>
+                <li><a href="/services/">Services</a></li>
+            </ul>
+        </article>
+
+        <article class="awesome">
+            <h4>Connect</h4>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-gitlab"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </article>
+        
+        <article class="subscribe">
+            <h4>Subscribers</h4>
+            <p>Make sure you dont miss interesting happening by joining our beautiful castles site!</p>
+            <label for="email">
+                <input type="email" id="email" placeholder="Your email adress">
+                <input type="submit" value="Subscribe" id="subscribe">
+            </label>
+        </article>
+    </section>
+    
+    <section class="footer copyright">
+        <div>&copy; 2018 Medieval Castles, All Rights Reserved!</div>
+        <div>Powered by Pavel Runchev</div>
+    </section>
 </footer>
     </div>
 </body>

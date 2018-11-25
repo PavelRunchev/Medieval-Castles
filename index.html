@@ -1,17 +1,21 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 
-
 layout: site
 ---
 
-<h2>View Posts</h2>
+	<h3>Beautiful Castles</h3>
+	<p>Selected to view them!</p>
+
 <ul class="listing posts">
 	{% for post in site.posts %}
 	<li>
 		<a href="{{ site.baseurl }}{{ post.url }}">
-			<span class="title">{{ post.title }}</span>
-			<span class="date">{{ post.date | date_to_string }}</span>
+			<article>
+				<p class="title">{{ post.title }}</p>
+				<p>Blog article to castles in country</p>
+				<span class="date">date - {{ post.date | date_to_string }}</span>
+			</article>
 		</a>
 	</li>
 	{% endfor %}

@@ -1,22 +1,12 @@
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
 
+@import 'reset';
+@import 'typography';
+@import 'layout';
+@import 'navigation';
+@import 'site-header';
+@import 'site-footer';
+@import 'support';
+@import 'gallery';
+@import 'posts';
 
-body {
-    background: lightgrey;
-    margin:0;
-    padding: 0;
-}
-
-.site {
-    text-align: center;
-}
-
-header,
-main,
-footer  {
-    text-align: center;
-    background: lightyellow;
-}
-
-li {
-    list-style: none;
-}
