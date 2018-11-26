@@ -1,0 +1,43 @@
+
+#contacts {
+    margin: 0 auto;
+   
+
+    & .contacts-description {
+
+        display: inline-block;
+        width: 25%;
+        margin: 3rem 0;
+        padding-left: 5rem;
+
+        & h3 {
+            background: -webkit-linear-gradient(#D94B6B, #000);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: left;
+        }
+
+        & p {
+            display: block;
+            color: #D94B6B;
+            text-shadow: 1px 1px 2px rgba(0,0,0, 1);
+            margin: 1rem 0;
+            padding-bottom: 0;
+            text-align: left;
+            font-size: 20px;
+            & span { font-weight: bold; }
+
+            & .fa-user-tie { color: lightseagreen; }
+            & .fa-user { color: lightgreen; }
+            & .fa-phone-square { color: purple; }
+            & .fa-envelope { color: gold; }
+            & .fa-facebook { color: #3B579D; }
+            & .fa-github-square { color: #FFF; }
+            & .fa-gitlab { color: #FC6D26; }
+            & .fa-linkedin { color: #0B2B5C; }
+            & .fa-skype { color: #00AFF0; }
+        }
+    }
+}

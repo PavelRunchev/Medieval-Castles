@@ -22,8 +22,11 @@ $color: lightgrey;
     padding-top: 3rem;
 
     & h3 {
-        color: $color;
-        text-shadow: 2px 2px 4px rgba(0,0,0, 0.8);
+        background: -webkit-linear-gradient(#D94B6B, #000);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     & p {

@@ -9,7 +9,6 @@
 }
 
 .navigation.main {
-    //background: linear-gradient(to right, rgba(0, 47, 150, 0.4), rgba(66, 51, 68, 0.4), rgba(0, 47, 150, 0.4));
     background: lightgrey;
     display: flex;
     justify-content: space-between;
@@ -63,25 +62,5 @@
     @for $i from 1 through 6 {
         & li:nth-child(#{$i}) { animation-delay: $i * 0.15s; }
     }
-
-    // .navigation.main a {
-    //     color: rgb(0, 189, 142);
-    //     display: block;
-    //     padding: 0.5rem 1rem;
-    //     text-decoration: none;
-    //     border-radius: 0.4rem;
-    //     border: solid transparent;
-    //     border-width: 2px 0;
-    //     text-shadow: 2px 2px 4px rgba(0,0,0, 1);
-    // }
-
-
-    // .site-header .navigation.main li:hover > a,
-    // .site-header .navigation.main a:hover {
-    // color: rgb(255,153,107);
-    // border-color: rgb(255,153,107);
-    // font-weight: bold;
-    // padding-top: 0.4rem;
-    // }
 }
 
