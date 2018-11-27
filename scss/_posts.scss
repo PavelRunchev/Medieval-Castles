@@ -19,9 +19,10 @@ $color: lightgrey;
     url('../assets/1_id9bCc_0KQeIXu9FGfFkUQ.jpeg'), no-repeat, center;
     background-size: cover;
     text-align: center;
-    padding-top: 3rem;
+    //padding-top: 3rem;
 
     & h3 {
+        margin-top: 3rem;
         background: -webkit-linear-gradient(#D94B6B, #000);
         -webkit-background-clip: text;
         -moz-background-clip: text;

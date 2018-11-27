@@ -8,6 +8,16 @@
     }
 }
 
+@keyframes shake {
+    0% {
+      transform: skewY(6deg);
+    }
+    100% {
+      transform: skewY(-6deg);
+    }
+  }
+  
+
 .navigation.main {
     background: lightgrey;
     display: flex;
@@ -17,6 +27,8 @@
     & img {
         margin: 0 2rem;
         height: 4rem;
+        animation: shake 2s infinite;
+        animation-direction: alternate;
     }
 
     & > ul {

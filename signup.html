@@ -3,6 +3,78 @@ layout: site
 title: Sign Up
 permalink: /signup/
 ---
-<section>
-    Sign up
+<section id="signup">
+    
+        <form id="signup-form">
+            <p>All fields is required!</p>
+            <p class="field">
+                <label for="username">Username</label>
+                <span>
+                    <i class="fas fa-user-tie"></i>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                </span>
+            </p>
+
+            <p class="field">
+                <label for="firstname">First Name</label>
+                <span>
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="firstname" id="firstname" placeholder="firstname">
+                </span>
+            </p>
+
+            <p class="field">
+                <label for="lasttname">Last Name</label>
+                <span>
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="lastname" id="lastname" placeholder="lastname">
+                </span>
+            </p>
+
+            <p class="field">
+                <label for="email">Email</label>
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </span>
+            </p>
+
+            <p class="field">
+                <label for="phone">Phone</label>
+                <span>
+                    <i class="fas fa-phone"></i>
+                    <input type="number" name="phone" id="phone" placeholder="phone">
+                </span>
+            </p>
+
+            <p class="field">
+                <label for="password">Password</label>
+                <span>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="password">
+                </span>
+            </p>
+
+            <p class="field">
+                <label for="repeat-password">Repeat Password</label>
+                <span>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="repeat-password" id="repeat-password" placeholder="repeat-password">
+                </span>
+            </p>
+
+            <p class="field">
+                <span>
+                        <input type="checkbox">
+                        <label>I accept to the agreement</label>
+                </span>
+               
+            </p>
+
+            <p class="buttons">
+                <button id="signup-submit">Submit</button>
+                <a href="{{ site.baseurl }}/signin/">join account</a>
+            </p>
+        </form>
+
 </section>

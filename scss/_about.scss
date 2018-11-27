@@ -1,0 +1,78 @@
+
+$boxSize: 5rem;
+$emptyTopMargin: 0;
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+        transform: translateX(-1 * $boxSize);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fog {
+	0% {
+		opacity: 0;
+    }
+    
+    25% {
+		opacity: 0.3;
+    }
+    
+    50% {
+		opacity: 0.5;
+    }
+    
+    75% {
+		opacity: 0.7;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+#about {
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    padding: 1rem 0 3rem 0;
+    margin-top: $emptyTopMargin;
+
+    & h3 { 
+        animation: fog 5s forwards; 
+        margin-top: $emptyTopMargin;
+        margin-bottom: 2rem;
+    }
+    & p {
+        color: #D94B6B;
+        text-shadow: 1px 1px 2px rgba(0,0,0, 1);
+        animation: fog 3s forwards;
+    }
+
+    & .box {
+        & span {
+            width: 2rem;
+            height: 1rem;
+            padding: 0.5rem 1.4rem;
+            margin: 0.5rem;
+            background:  grey;
+            animation: slideDown 2s infinite both;
+            border-radius: 50%;
+        }
+
+        & .box {
+            margin-top: 2rem;
+        }
+
+        @for $i from 1 through 10 {
+            & span:nth-child(#{$i}) {
+                animation-delay: $i * 0.20s;
+            }
+        }
+    }
+}
