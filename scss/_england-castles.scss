@@ -1,0 +1,51 @@
+@mixin picture {
+    width: 50%;
+    height: auto;
+    position: relative;
+    border: 1px solid black;
+    margin: 1rem 3rem 2rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.8);
+}
+
+@mixin text {
+    color: #000;
+    font-style: normal;
+    text-align: left;
+    padding: 0 2rem 0 1rem;
+}
+
+#post-england {
+    font-family: 'PT serif', serif;
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & .england-castles {
+        width: 60%;
+        height: auto;
+        margin: 3rem auto;
+        border: 2px solid black;
+        border-radius: 0.5rem;
+        background: rgba(255,255,255, 0.6);
+        box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.8);
+
+        & h2 { padding: 2rem 0; }
+
+        & article:nth-child(even) { 
+            padding: 1rem 1rem 5rem 1rem;
+            & img { float: right; @include picture; }  
+            & h3 { text-align: left; margin: 1rem 0 0 1rem; }
+            & p { @include text; }
+        }
+
+        & article:nth-child(odd) { 
+            padding: 1rem 1rem 5rem 1rem;
+            & img { float: left; @include picture; } 
+            & h3 { text-align: left; margin-top: 1rem; }
+            & p { @include text; }
+        }
+    }
+}
