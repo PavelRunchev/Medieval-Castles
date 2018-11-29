@@ -6,6 +6,7 @@
     border: 2px solid black;
     margin-bottom: 4rem;
     box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    animation: upperform 3s ease-out;
 }
 
 #signin {
@@ -13,21 +14,22 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+   
 
     & #castle {
         margin-top: 3rem;
-        background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.6)), 
+        background: linear-gradient(rgba(0,0,0,0.9),rgba(217,75,107,0.6)), 
         url('../assets/neuschwanstein.jpg'), no-repeat, center;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        padding: 2rem 0;
+        //padding: 2rem 0;
         border-top-left-radius: 0.5rem;
         border-bottom-left-radius: 0.5rem;
         @include signin-form;
 
         & h3 { 
-            padding-bottom: 18rem; 
+            padding-bottom: 16rem; 
             margin-top: 0;
         }
     }
@@ -55,7 +57,7 @@
                 & div { 
                     color: grey;
                     border-bottom: 1px solid grey;
-                    margin-bottom: 2rem;
+                    margin-bottom: 4rem;
                     font-style: italic;
                 }
 
@@ -99,20 +101,20 @@
                         border-radius: 1rem;
                         font-weight: bold;
                         font-size: 16px;
-                    }
-
-                    & #submit:hover {
-                        background: white;
-                        color: rgb(217,75,107);
+                        &:hover {
+                            background: white;
+                            color: rgb(217,75,107);
+                        }
+                        &:active {
+                            background: white;
+                            color: black;
+                        }
                     }
 
                     & .create-account {
                         font-size: 16px;
-                        color: #9766C2;;
-                    }
-
-                    & .create-account:hover {
-                        color: rgb(217,75,107);
+                        color: #9766C2;
+                        &:hover { color: rgb(217,75,107); }
                     }
                 }
             }

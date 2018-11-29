@@ -1,7 +1,8 @@
+
+
 #services {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
     padding-top: 3rem;
-    background-color: #DFDBE5;
-    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     text-align: center;
 
     & .services-description {
@@ -10,19 +11,25 @@
         padding: 2rem;
 
         & article {
-            width: 20%;
+            width: 15%;
             border: 2px solid grey;
             padding: 2rem;
             background: rgba(255,255,255, 0.3);
             border-radius: 0.5rem;
             cursor: pointer;
             transition: background 0.4s ease-in, color 0.3s ease-in;
+            animation: grow 0.3s ease-out;
 
             &:hover {
-                background: rgba(0,0,0, 0.3);
+                background: rgba(217, 75, 107, 0.5);
                 p {
                     color: white;
                 }
+                transform: scale(0.9);
+                transition-duration: 0.3s;
+                animation: small 0.3s ease-in;
+                animation-fill-mode: both;
+                animation-duration: 0.3s;
             }
 
             & i {

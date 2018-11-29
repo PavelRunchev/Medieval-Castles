@@ -1,9 +1,20 @@
+@keyframes rotate {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(180deg);
+    }
+}
+
 
 @mixin logo {
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
     margin: 0.3rem 4rem;
+    animation: rotate 30s infinite;
+    animation-direction: alternate;
 }
 
 @mixin typography {
@@ -131,18 +142,22 @@
             }
 
             #subscribe {
+                outline: none;
                 background: #D94B6B;
                 cursor: pointer;
                 border-radius: 0.3rem;
                 padding: 0.2rem 0.5rem;
                 border: none;
                 border: 2px solid #D94B6B;
-            }
-
-            #subscribe:hover {
-                background: #9766C2;
-                border: 2px solid #9766C2;
-                color: #FFF;
+                &:hover {
+                    background: #9766C2;
+                    border: 2px solid #9766C2;
+                    color: #FFF;
+                }
+                &:active {
+                    background: black;
+                    color: white;
+                }
             }
         }
     }

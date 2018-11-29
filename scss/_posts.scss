@@ -10,24 +10,23 @@ $color: lightgrey;
     font-weight: bolder;
     color: #FFF;
     vertical-align: middle;
-    border-radius: 0.3rem;
+    border-radius: 0.6rem;
+    background: rgba(0,0,0,0.7);
+    text-shadow: 1px 1px 2px rgba(0,0,0, 1);
 }
 
 
 .site-content {
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), 
-    url('../assets/1_id9bCc_0KQeIXu9FGfFkUQ.jpeg'), no-repeat, center;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), 
+    url('../assets/feat-2.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
-    //padding-top: 3rem;
-
+    
     & h3 {
-        margin-top: 3rem;
-        background: -webkit-linear-gradient(#D94B6B, #000);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        padding-top: 3rem;
+        color: #D94B6B;
+        text-shadow: 1px 1px 2px rgba(0,0,0, 1);
     }
 
     & p {
@@ -38,7 +37,7 @@ $color: lightgrey;
     & .listing.posts {
         display: flex;
         justify-content: space-around;
-
+        
         & li {
             transition: background 0.3s ease-in, color 0.3s ease-in;
             @include blog-view;

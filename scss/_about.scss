@@ -38,9 +38,8 @@ $emptyTopMargin: 0;
 
 
 #about {
-    background-color: #DFDBE5;
-    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    padding: 1rem 0 3rem 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    padding: 5rem 0 8rem 0;
     margin-top: $emptyTopMargin;
 
     & h3 { 
@@ -55,12 +54,13 @@ $emptyTopMargin: 0;
     }
 
     & .box {
+        margin: 5rem 0;
         & span {
             width: 2rem;
             height: 1rem;
             padding: 0.5rem 1.4rem;
             margin: 0.5rem;
-            background:  grey;
+            background:  #D94B6B;
             animation: slideDown 2s infinite both;
             border-radius: 50%;
         }

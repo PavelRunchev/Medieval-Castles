@@ -1,0 +1,43 @@
+
+
+#vote {
+    margin: 0 auto;
+
+    & .vote-castles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: top;
+
+        & article {
+            max-width: 20%;
+            background: rgba(0,0,0,0.7);
+            border: 1px solid black;
+            padding: 1rem;
+            margin: 3rem 0;
+            text-align: left;
+            border-radius: 0.5rem;
+            box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.5);
+
+            & .vote {
+                outline: none;
+                border: none;
+                background: rgb(217,75,107);
+                color: white;
+                padding: 0.5rem 2rem;
+                cursor: pointer;
+                border-radius: 1rem;
+                font-weight: bold;
+                font-size: 16px;
+                &:hover {
+                    background: white;
+                    color: rgb(217,75,107);
+                }
+                &:active {
+                    background: #9766C2;
+                    color: white;
+                }
+            }
+        }
+    }
+}

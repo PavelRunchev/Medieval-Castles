@@ -1,13 +1,10 @@
-$global-padding: 4rem;
+$global-padding: 12rem;
 
 .special-thanks {
-    padding-top: 3rem;
-    background-color: #DFDBE5;
-    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
 
     & #thanks-title {
-        margin-top: 1rem;
-        padding-bottom: $global-padding;
+        padding: 6rem 0;
         opacity: 0;
         animation: rotate-text 4s 1 forwards;
     }
@@ -15,10 +12,15 @@ $global-padding: 4rem;
     & .trainers {
         color: black;
         font-weight: bold;
-        font-size: 18px;
-        padding-bottom: $global-padding;
+        font-size: 22px;
+        padding-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0, 1);
         opacity: 0;
         animation: rotate-text 4s 1 forwards;
         animation-delay: 4s;
+    }
+
+    & .trainers:last-child {
+        padding-bottom: $global-padding;
     }
 }
