@@ -98,10 +98,10 @@
             text-align: center;
             position: relative;
 
-            & i {
+            & > i {
                 width: 10%;
                 font-size: 18px;
-                margin: 2rem 0.3rem;
+                margin: 1rem 0.3rem;
                 @include icons;
             }
 

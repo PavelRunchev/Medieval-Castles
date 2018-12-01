@@ -8,6 +8,7 @@
 
 .support {
     background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    will-change: transform, opacity;
     
     & #support-title {
         padding-top: 3rem;
@@ -18,7 +19,7 @@
 
     & .support-contains {
         padding: 8rem;
-        text-align: center;
+        
 
         & .library:nth-of-type(odd){
             display: block;
@@ -40,6 +41,8 @@
 
         & img { @include support-icons; }
     }
+
+    //will-change: unset;
 }
 
 @keyframes odd {
@@ -65,3 +68,4 @@
         opacity: 1;
     }
 }
+
