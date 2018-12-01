@@ -38,11 +38,14 @@ $emptyTopMargin: 0;
 
 
 #about {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.4));
     padding: 5rem 0 8rem 0;
     margin-top: $emptyTopMargin;
 
-    & h3 { 
+    & > h3 { 
+        padding-top: 3rem;
+        color: #D94B6B;
+        text-shadow: 1px 1px 2px rgba(0,0,0, 1);
         animation: fog 5s forwards; 
         margin-top: $emptyTopMargin;
         margin-bottom: 2rem;
@@ -74,5 +77,11 @@ $emptyTopMargin: 0;
                 animation-delay: $i * 0.20s;
             }
         }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about {
+        & .box { display: none; }
     }
 }

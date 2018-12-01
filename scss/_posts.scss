@@ -17,13 +17,13 @@ $color: lightgrey;
 
 
 .site-content {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), 
-    url('../assets/feat-2.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), 
+    url('../assets/castle-neuschwanstein.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     
-    & h3 {
+    & > h3 {
         padding-top: 3rem;
         color: #D94B6B;
         text-shadow: 1px 1px 2px rgba(0,0,0, 1);
@@ -37,6 +37,10 @@ $color: lightgrey;
     & .listing.posts {
         display: flex;
         justify-content: space-around;
+
+        & ul {
+            padding-left: 0;
+        }
         
         & li {
             transition: background 0.3s ease-in, color 0.3s ease-in;
@@ -50,6 +54,18 @@ $color: lightgrey;
             color: rgb(217,75,107);
             border-color: grey;
             text-shadow: 2px 2px 4px rgba(0,0,0, 1);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .site-content {
+        & .listing.posts {
+            display: inline-block;
+            & li {
+                width: 80%;
+                display: block;
+            }
         }
     }
 }

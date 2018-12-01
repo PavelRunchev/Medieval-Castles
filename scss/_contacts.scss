@@ -2,7 +2,7 @@
 
 #contacts {
     margin: 0 auto;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(0,0,0,0.6));
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
     
     & .contacts-description {
         display: inline-block;
@@ -10,7 +10,12 @@
         margin: 3rem 0;
         padding-left: 5rem;
 
-        & h3 { text-align: left; }
+        & > h3 {
+            padding-top: 3rem;
+            color: #D94B6B;
+            text-shadow: 1px 1px 2px rgba(0,0,0, 1);
+            text-align: left;
+        }
 
         & p {
             display: block;
@@ -22,7 +27,7 @@
             font-size: 22px;
             opacity: 0;
             animation: navitemin 4s 1 ease forwards;
-            transform: scale(0.1) translate(0, 3rem) rotate(720deg);
+            transform: scale(0.1) translate(0, 3rem) rotate(360deg);
             
             & span { font-weight: bold; }
 
@@ -39,6 +44,36 @@
 
         @for $i from 1 through 10 {
             & p:nth-child(#{$i}) { animation-delay: $i * 0.20s; }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #contacts {
+        & .contacts-description {
+            width: 40%;
+            padding-left: 0;
+            & p { font-size: 20px; }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #contacts {
+        & .contacts-description {
+            width: 55%;
+            padding-left: 0;
+            & p { font-size: 18px; }
+        }
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #contacts {
+        & .contacts-description {
+            width: 100%;
+            padding-left: 1rem;
+            & p { font-size: 16px; }
         }
     }
 }

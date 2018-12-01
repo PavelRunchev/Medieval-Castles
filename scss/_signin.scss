@@ -1,21 +1,22 @@
-@mixin signin-form {
-    font-family: 'Lato', serif;
-    display: inline-block;
-    width: 25%;
-    height: 55vh;
-    border: 2px solid black;
-    margin-bottom: 4rem;
-    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
-    animation: upperform 3s ease-out;
-}
+
 
 #signin {
+    @mixin signin-form {
+        font-family: 'Lato', serif;
+        display: inline-block;
+        width: 25%;
+        height: 60vh;
+        border: 2px solid black;
+        margin-bottom: 4rem;
+        box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+        animation: upperform 3s ease-out;
+    }
+
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
    
-
     & #castle {
         margin-top: 3rem;
         background: linear-gradient(rgba(0,0,0,0.9),rgba(217,75,107,0.6)), 
@@ -23,14 +24,16 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        //padding: 2rem 0;
         border-top-left-radius: 0.5rem;
         border-bottom-left-radius: 0.5rem;
         @include signin-form;
 
         & h3 { 
-            padding-bottom: 16rem; 
+            padding-bottom: 20rem; 
             margin-top: 0;
+            padding-top: 3rem;
+            color: #D94B6B;
+            text-shadow: 1px 1px 2px rgba(0,0,0, 1);
         }
     }
 
@@ -57,7 +60,8 @@
                 & div { 
                     color: grey;
                     border-bottom: 1px solid grey;
-                    margin-bottom: 4rem;
+                    margin-bottom: 20%;
+                    margin-top: 2rem;
                     font-style: italic;
                 }
 
@@ -93,7 +97,7 @@
 
                     & #submit {
                         border: none;
-                        margin: 0 3rem;
+                        margin: 0 3rem 3rem 3rem;
                         background: rgb(217,75,107);
                         color: white;
                         padding: 0.5rem 2rem;
@@ -118,6 +122,102 @@
                     }
                 }
             }
+    }
+}
+
+@media screen and (max-width: 1740px) {
+    #signin {
+        & #castle,
+        & #signin-form{
+            width: 35%;
+
+            & form {
+                & #signin-buttons > #submit {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #signin {
+        & #castle,
+        & #signin-form{
+            width: 35%;
+
+            & form {
+                & #signin-buttons > #submit {
+                    margin: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #signin {
+        & #castle,
+        & #signin-form{
+            & form {
+                & #signin-buttons > #submit {
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #signin {
+        & #signin-form{
+            & form {
+                & #signin-buttons > #submit {
+                    margin: 1.3rem 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 810px) {
+    #signin {
+        & #castle,
+        & #signin-form {
+           width: 45%;
+
+           & form {
+            & #signin-buttons > #submit {
+                margin: 0 1rem 2rem 1rem;
+            }
+        }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #signin {
+        display: block;
+        & #castle,
+        & #signin-form {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        & #castle {
+            margin-top: 3rem;
+            border-top-right-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-left-radius: unset;
+        }
+
+        & #signin-form {
+            margin-bottom: 3rem;
+            border-top-right-radius: unset;
+            border-bottom-right-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+        }
     }
 }
 

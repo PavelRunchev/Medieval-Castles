@@ -12,7 +12,7 @@
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
-    margin: 0.3rem 4rem;
+    margin: 0.5rem 4rem;
     animation: rotate 30s infinite;
     animation-direction: alternate;
 }
@@ -51,13 +51,11 @@
         background: grey;
         grid-column: 1 / -1;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         
-
         & article {
-            justify-content: left;
-            margin: 2rem 1rem;
-            width: 20%;
+            margin: 2.5rem 0;
+            width: 22%;
         }
 
         & h4 {
@@ -76,7 +74,7 @@
 
         @at-root .links {
             h4 {
-                padding-left: 2rem;
+                padding-left: 0.5rem;
             }
 
             li {
@@ -109,26 +107,27 @@
 
             & .fa-github {
                 color: black;
-                padding: 0.3rem;
+                padding: 0.4rem 0;
             }
 
             & .fa-gitlab {
                 color: #E24329; 
-                padding: 0.3rem;  
+                padding: 0.4rem 0;  
             }
 
             & .fa-facebook-f {
-                color: #3B579D;        
+                color: #3B579D;  
+                padding: 0.4rem 0;      
             }
 
             & .fa-twitter {
                 color: #5DA9DD;
-                padding: 0.3rem;
+                padding: 0.4rem 0;
             }
 
             & .fa-linkedin-in {
                 color: #006599;
-                padding: 0.3rem 0.4rem;
+                padding: 0.4rem 0;
             }
         }
 
@@ -169,6 +168,165 @@
         grid-column: 1 / -1;
         & div {
             text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 1428px) {
+    .site-footer {
+        & .services {
+            & article { width: 20%; } 
+        }
+
+        & .subscribe {
+            & #email {
+                width:50%;
+                border: none;
+                padding: 0.2rem 0.5rem;
+            }
+
+            & #subscribe { padding: 0.2rem; }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .site-footer {
+        & .logo { & img { margin: 0.5rem 2rem; } }
+
+        & .services {
+            & article { width: 23%; } 
+        }
+
+        & .awesome {
+            & i { 
+                padding: 0.3rem; 
+                margin: 2rem 0;
+            }
+        }
+
+        & .subscribe {
+            & #email {
+                width:50%;
+                border: none;
+                padding: 0.2rem 0.5rem;
+            }
+
+            & #subscribe { padding: 0.2rem; }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 786px) {
+    .site-footer {
+        & .logo {
+            & img {
+                margin: 0.5rem 1rem;
+            }
+        }
+
+        & .services {
+            flex-wrap: wrap;
+            & article {
+                width: 40%;
+                text-align: center;
+            }
+        }
+
+        & .copyright { & div { font-size: 10px; }}
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .site-footer {
+        background-position: center;
+
+        & .logo {
+            & img {
+                display: block;
+                margin: 1rem auto;
+            }
+        }
+
+        & .services {
+            display: block;
+            padding: 2rem 0;
+
+            & article {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 16px;
+                padding-bottom: 2rem;
+                margin-left: 0;
+
+                & h4 { font-size: 30px; }
+            }
+
+            & .awesome {
+                position: relative;
+
+                & i { padding: 1rem 0; }
+            }
+
+            & .subscribe {
+                margin-left: 0;
+                margin-right: 0;
+                font-size: 14px;
+
+                & p { padding: 0 2rem 2rem 2rem; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    $global-size: 10px;
+
+    .site-footer {
+        & .services {
+
+            & article {
+                & h4 { font-size: 18px; }
+                & p,
+                & div > p, 
+                & div,
+                & span { font-size: $global-size; }
+                & ul > li > a { 
+                    font-size: 14px; 
+                    text-align: left;
+                }
+            }
+
+            & .awesome { & i { padding: 0.5rem 0; } }
+
+            & .subscribe {
+                font-size: $global-size;
+
+                p,
+                label {
+                    padding-left: 2rem;
+                }
+            }
+        }
+
+        & .copyright { & div { font-size: $global-size; } }
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .site-footer {
+        & .services {
+            & .subscribe {
+                #email {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }

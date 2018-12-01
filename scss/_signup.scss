@@ -5,8 +5,14 @@
     flex-direction: column;
     justify-content: center;
 
+    & > h3 {
+        padding-top: 1rem;
+        color: #D94B6B;
+        text-shadow: 1px 1px 2px rgba(0,0,0, 1);
+    }
+
     & #signup-form {
-        margin: 3rem auto;
+        margin: 1rem auto;
         padding: 1rem 2rem;
         background: rgba(0,0,0,0.7);
         background-size: cover;
@@ -132,6 +138,46 @@
         & p:nth-of-type(10) {
             grid-column: 1 / -1;
             grid-row: 5;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #signup {
+        & > #signup-form {
+            max-width: 80%;
+            grid-gap: 0.3rem;
+
+            & .firstName,
+            & .lastName,
+            & .email { padding-left: 1rem; }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #signup {
+        & > #signup-form {
+            max-width: 85%;
+            grid-gap: 0;
+            grid-template-columns: repeat(3, 15rem);
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #signup {
+        & > #signup-form {
+           display: block;
+           text-align: center;
+
+           & .field {
+               padding-left: 0;
+               & label { padding-left: 3rem;}
+               & input { width: 80%; }
+           }
+
+           & .buttons #signup-submit { margin-left: 0; }
         }
     }
 }

@@ -10,7 +10,9 @@
     background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
     
     & #support-title {
-        padding-top: 5rem;
+        padding-top: 3rem;
+        color: #D94B6B;
+        text-shadow: 1px 1px 2px rgba(0,0,0, 1);
         margin-top: 0;
     }
 
@@ -42,7 +44,7 @@
 
 @keyframes odd {
     0% {
-        transform: translateX(-35rem);
+        transform: translateX(-25rem);
         opacity: 0;
     }
 
@@ -54,7 +56,7 @@
 
 @keyframes even {
     0% {
-        transform: translateX(35rem);
+        transform: translateX(25rem);
         opacity: 0;
     }
 

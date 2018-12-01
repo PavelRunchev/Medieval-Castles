@@ -32,7 +32,7 @@
     }
 
     & > ul {
-        margin-right: 5rem;
+        margin-right: 4rem;
         display: inline-block;
         transition: opacity 0.2s ease-out, transform 0.2s ease-in;
         transform: translateX(2rem);
@@ -51,6 +51,7 @@
             color: #D94B6B;
             display: block;
             padding: 0.5rem 1rem;
+            font-size: 18px;
             text-decoration: none;
             border-radius: 0.4rem;
             border: solid transparent;
@@ -62,7 +63,6 @@
             background: none;
             background-clip: unset;
             -webkit-text-fill-color: unset;
-
             color: #9766C2;
             padding-top: 0.3rem;
             font-weight: bold;
@@ -71,8 +71,80 @@
         }
     }
 
+    & #bars,
+    & #times { display: none; }
+
     @for $i from 1 through 6 {
         & li:nth-child(#{$i}) { animation-delay: $i * 0.15s; }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .navigation.main {
+        & ul > li > a { padding: 0.5rem; }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navigation.main {
+        & ul { 
+            padding-left: 0; 
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .navigation.main {
+        display: inline-block;
+        text-align: center;
+    
+        & #castle-logo { 
+            display: block; 
+            margin-top: 1rem;
+        }
+
+        & ul {
+            position: relative;
+            left: -2rem;
+            margin-right: 0;
+            padding-top: 1.5rem;
+            & li { padding: 0; }
+        }
+    }
+}
+    
+@media screen and (max-width: 500px) {
+        .navigation.main {
+            display: inline-block;
+            text-align: center;
+    
+            & #castle-logo { display: block; }
+    
+            & ul {
+                display: inline-block;
+                margin-right: 0;
+                margin-left: 0;
+                padding-left: 0;
+                padding-right: 0;
+                width: 48%;
+                position: relative;
+                left: -2rem;
+            }
+    
+            & ul li {
+                width: 100%;
+                display: block;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+    
+                & a { font-size: 18px; }
+            }
+    
+            & #toggle,
+            & #main-nav-toggle { display: none; }
+        }
+}
+    
+
 

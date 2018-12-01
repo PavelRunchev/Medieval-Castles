@@ -1,25 +1,27 @@
-@mixin picture {
-    width: 50%;
-    height: auto;
-    position: relative;
-    border: 1px solid black;
-    margin: 1rem 3rem 2rem 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.8);
-}
-
-@mixin text {
-    color: #000;
-    font-style: normal;
-    text-align: left;
-    padding: 0 2rem 0 1rem;
-    text-shadow: 1px 1px 2px rgba(255,255,255, 1);
-}
+.site-content h3 { padding-top: 0;}
 
 #post-germany {
+    @mixin picture {
+        width: 50%;
+        height: auto;
+        position: relative;
+        border: 1px solid black;
+        margin: 1rem 3rem 2rem 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.8);
+    }
+
+    @mixin text {
+        color: #000;
+        font-style: normal;
+        text-align: left;
+        padding: 0 2rem 0 1rem;
+        text-shadow: 1px 1px 2px rgba(255,255,255, 1);
+    }
+
     font-family: 'PT serif', serif;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)), 
-    url('../assets/feat-2.jpg');
+    url('../assets/castle-neuschwanstein.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -37,19 +39,126 @@
         box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.8);
 
         & h2 { padding: 2rem 0; }
-
+    
         & article:nth-child(even) { 
             padding: 1rem 1rem 5rem 1rem;
-            & img { float: right; @include picture; margin-bottom: 1rem; }  
-            & h3 { text-align: left; margin: 1rem 0 0 1rem; }
+            & img { float: left; @include picture; }  
+            & h3 { 
+                text-align: left; 
+                margin-top: 1rem; 
+                color: #D94B6B;
+                text-shadow: 1px 1px 2px rgba(0,0,0, 1);
+            }
             & p { @include text; }
         }
 
         & article:nth-child(odd) { 
             padding: 1rem 1rem 5rem 1rem;
-            & img { float: left; @include picture; } 
-            & h3 { text-align: left; margin-top: 1rem; }
+            & img { float: right; @include picture; } 
+            & h3 { 
+                text-align: left; 
+                margin: 1rem 0 1rem 1rem; 
+                margin-bottom: 1rem; 
+                color: #D94B6B;
+                text-shadow: 1px 1px 2px rgba(0,0,0, 1);
+            }
             & p { @include text; }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #post-germany {
+        & .germany-castles {
+            & article:nth-child(even),
+            & article:nth-child(odd) { 
+                & img { margin: 1rem 2rem 1rem 1rem; } 
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    #post-germany {
+        .germany-castles {
+            & article {
+                & h3 { 
+                    font-size: 18px; 
+                    margin-top: 0;
+                    padding-top: 0;
+                    
+                }
+
+                & p { color: blue;}
+            }
+        }   
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    #post-germany {
+        & .germany-castles {
+            & article:nth-child(even),
+            & article:nth-child(odd) { 
+                & img { margin: 1rem; } 
+            }
+
+            & article {
+                & h3 { 
+                    font-size: 16px; 
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+                & p { font-size: 12px; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #post-germany {
+        & .germany-castles {
+            & article:nth-child(even),
+            & article:nth-child(odd) {
+
+                & h3 { 
+                    font-size: 14px; 
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+                & p { font-size: 10px; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img { margin: 0; }
+
+    #post-germany {
+        & .germany-castles {
+            & article:nth-child(even),
+            & article:nth-child(odd) {
+                margin: 0;
+                width: 90%;
+
+                & img {
+                    float: unset;
+                    width: 100%;
+                    margin: 0;
+                }
+                & h3 {
+                    text-align: center;
+                    margin-top: 2rem;
+                }
+                & p {
+                    display: block;
+                    width: 100%;
+                    padding: 0;
+                }
+            }
         }
     }
 }

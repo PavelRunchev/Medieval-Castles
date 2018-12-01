@@ -1,19 +1,26 @@
 
 
 #services {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    padding-top: 3rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    padding: 3rem 0 6rem 0;
     text-align: center;
+
+    & > h3 {
+        padding-top: 3rem;
+        color: #D94B6B;
+        text-shadow: 1px 1px 2px rgba(0,0,0, 1);
+    }
 
     & .services-description {
         display: flex;
-        justify-content: space-around;
-        padding: 2rem;
+        justify-content: space-evenly;
+        margin-top: 5rem;
 
         & article {
             width: 15%;
             border: 2px solid grey;
             padding: 2rem;
+
             background: rgba(255,255,255, 0.3);
             border-radius: 0.5rem;
             cursor: pointer;
@@ -33,8 +40,7 @@
             }
 
             & i {
-                
-                width: 5rem;
+                width: 70%;
                 border-radius: 50%;
                 background: white;
                 font-size: 35px;
@@ -42,28 +48,111 @@
 
             & .fa-check {
                 color: lightseagreen;
-                padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+                padding: 4rem 0.5rem;
             }
 
             & .fa-cogs {
                 color: darkgoldenrod;
-                padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+                padding: 4rem 0.5rem;
             }
 
             & .fa-lightbulb {
                 color: lightblue;
-                padding: 1.5rem 2rem 1.5rem 2rem;
+                padding: 4rem 0.5rem;
             }
 
             & .fa-question {
                 color: lightcoral;
-                padding: 1.5rem 2rem 1.5rem 2rem;
+                padding: 4rem 0.5rem;
             }
 
             & p {
                 margin-top: 1.5rem;
                 color: black;
                 font-weight: bold;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #services {
+        & services-description {
+            & article { 
+                width: 11%; 
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #services {
+        & .services-description {
+            flex-wrap: wrap;
+
+            & article { 
+                width: 30%;
+                margin-top: 2rem;
+
+                & .fa-check {
+                    color: lightseagreen;
+                    padding: 4rem 0.5rem;
+                }
+    
+                & .fa-cogs {
+                    color: darkgoldenrod;
+                    padding: 4rem 0.5rem;
+                }
+    
+                & .fa-lightbulb {
+                    color: lightblue;
+                    padding: 4rem 0.5rem;
+                }
+    
+                & .fa-question {
+                    color: lightcoral;
+                    padding: 4rem 0.5rem;
+                }
+
+                & p { font-size: 18px; }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #services {
+        & .services-description {
+            flex-wrap: wrap;
+
+            & article { 
+                width: 55%;
+                margin-top: 2rem;
+
+                & .fa-check {
+                    color: lightseagreen;
+                    padding: 6rem 0.5rem;
+                }
+    
+                & .fa-cogs {
+                    color: darkgoldenrod;
+                    padding: 6rem 0.5rem;
+                }
+    
+                & .fa-lightbulb {
+                    color: lightblue;
+                    padding: 6rem 0.5rem;
+                }
+    
+                & .fa-question {
+                    color: lightcoral;
+                    padding: 6rem 0.5rem;
+                }
+
+                & p { font-size: 18px; }
+
             }
         }
     }
