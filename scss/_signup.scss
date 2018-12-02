@@ -53,6 +53,34 @@
                     outline: none;
                     border-radius: 0.3rem;
                     border: 2px solid lightgrey;
+
+                    //focus placeholder for Chrome
+                    &:focus,
+                    &:focus::-webkit-input-placeholder, {
+                        border-color: rgb(217,75,107);
+                        color: rgb(217,75,107);
+                    }
+
+                    //focus placeholder for FireFox 19+
+                    &:focus,
+                    &:focus::-moz-placeholder, {
+                        border-color: rgb(217,75,107);
+                        color: rgb(217,75,107);
+                    }
+                
+                    //focus placeholder for FireFox 18-
+                    &:focus,
+                    &:focus:-moz-placeholder, {
+                        border-color: rgb(217,75,107);
+                        color: rgb(217,75,107);
+                    }
+
+                    //focus placeholder for Internet Explorer
+                    &:focus,
+                    &:focus:-ms-input-placeholder {
+                        border-color: rgb(217,75,107);
+                        color: rgb(217,75,107);
+                    }
                 }
             }
 
