@@ -66,8 +66,6 @@
                 }
 
                 & p {
-
-                    padding-left: 5rem;
                     & label {
                         display: block;
                         text-align: left;
@@ -76,15 +74,13 @@
                         font-weight: 300;
                         font-style: normal;
                         color: grey;
-                        padding-left: 5rem; 
+                        padding-left: 3rem; 
                     }
 
                     & span {
                         text-align: center;
                         & i {
-                            position: relative;
-                            right: 13rem;
-                            color: grey;
+                            color: rgb(217,75,107);
                             padding: 0 1rem;
                         }
 
@@ -122,11 +118,6 @@
                             //focus placeholder for Internet Explorer
                             &:focus,
                             &:focus:-ms-input-placeholder {
-                                border-color: rgb(217,75,107);
-                                color: rgb(217,75,107);
-                            }
-
-                            &:focus + i {
                                 border-color: rgb(217,75,107);
                                 color: rgb(217,75,107);
                             }
