@@ -138,6 +138,30 @@
                 border: 2px solid grey;
                 padding: 0.2rem 1rem;
                 border-radius: 0.3rem;
+
+                &:focus,
+                &:focus::-webkit-input-placeholder {
+                    border-color: #D94B6B;
+                    color: rgb(217,75,107);
+                }
+
+                &:focus,
+                &:focus::-moz-placeholder {
+                    border-color: #D94B6B;
+                    color: rgb(217,75,107);
+                }
+
+                &:focus,
+                &:focus:-moz-placeholder {
+                    border-color: #D94B6B;
+                    color: rgb(217,75,107);
+                }
+
+                &:focus,
+                &:focus:-ms-input-placeholder {
+                    border-color: #D94B6B;
+                    color: rgb(217,75,107);
+                }
             }
 
             #subscribe {
@@ -148,10 +172,12 @@
                 padding: 0.2rem 0.5rem;
                 border: none;
                 border: 2px solid #D94B6B;
+                color: #FFF;
+                //font-weight: bold;
                 &:hover {
-                    background: #9766C2;
-                    border: 2px solid #9766C2;
-                    color: #FFF;
+                    background: #FFF;
+                    border: 2px solid #D94B6B;
+                    color: #D94B6B;
                 }
                 &:active {
                     background: black;
