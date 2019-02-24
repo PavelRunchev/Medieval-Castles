@@ -9,41 +9,41 @@ permalink: /gallery/
     <p id="gallery-paragraph">Top 12 Buiteful Castles</p>
 
     <div class="gallery">
-        <a class="boldt-castle" data-background="./assets/2.gif">
+        <a class="boldt-castle" lazyload="on">
             <div><p>Boldt Castle - USA</p></div>
         </a>
 
-        <a class="corvins-castle">
+        <a class="corvins-castle" lazyload="on">
             <div><p>Corvin Castle - Romania</p></div>
         </a>
-        <a class="egeskov-castle">
+        <a class="egeskov-castle" lazyload="on">
             <div><p>Egeskov Castle - Denmark</p></div>
         </a>
-        <a class="frederiksborg-castle">
+        <a class="frederiksborg-castle" lazyload="on">
             <div><p>Frederiksborg Castle - Denmark</p></div>
         </a>
 
-        <a class="kilkenny-castle">
+        <a class="kilkenny-castle" lazyload="on">
             <div><p>Kilkenny Castle - Ireland</p></div>
         </a>
 
-        <a class="peles-castle">
+        <a class="peles-castle" lazyload="on">
             <div><p>Peles Castle - Romania</p></div>
         </a>
 
-        <a class="jemeppe-castle">
+        <a class="jemeppe-castle" lazyload="on">
             <div><p>Jemeppe Castle - Belgium</p></div>
         </a>
 
-        <a class="prague-castle">
+        <a class="prague-castle" lazyload="on">
             <div><p>Prague Castle - Czech Republic</p></div>
         </a>
 
-        <a class="almourol-castle">
+        <a class="almourol-castle" lazyload="on">
             <div><p>Almourol Castle - Portugal</p></div>
         </a>
 
-        <a class="pena-palace">
+        <a class="pena-palace" lazyload="on">
             <div><p>Pena Palace - Portugal</p></div>
         </a>
 
@@ -56,3 +56,11 @@ permalink: /gallery/
         </a>
     </div>
 </section>
+<script>
+    window.addEventListener('load', function() {
+      let allimages= document.getElementsByTagName('a');   
+      for (const i of allimages) {
+          i.setAttribute('src', i.getAttribute('data-src')); 
+      }            
+    }, false)
+</script>
