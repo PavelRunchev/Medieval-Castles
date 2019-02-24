@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" sizes="100x100" href="/Medieval-Castles/assets/castle-logo-design.png">
     <link rel="shortcut icon" type="image/x-icon" sizes="100x100" href="/Medieval-Castles/assets/castle-logo-design.ico">
     <link rel="stylesheet" type="text/css" href="/Medieval-Castles/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/jquery.lazy/jquery.lazy.min.js"></script>
 </head>
 <body class="gallery">
     <div class="site">
@@ -44,61 +46,67 @@
     <p id="gallery-paragraph">Top 12 Buiteful Castles</p>
 
     <div class="gallery">
-        <a class="boldt-castle" lazyload="on">
+        <a class="lazy boldt-castle" lazyload="on">
             <div><p>Boldt Castle - USA</p></div>
         </a>
 
-        <a class="corvins-castle" lazyload="on">
+        <a class="lazy corvins-castle" lazyload="on">
             <div><p>Corvin Castle - Romania</p></div>
         </a>
-        <a class="egeskov-castle" lazyload="on">
+        <a class="lazy egeskov-castle" lazyload="on">
             <div><p>Egeskov Castle - Denmark</p></div>
         </a>
-        <a class="frederiksborg-castle" lazyload="on">
+        <a class="lazy frederiksborg-castle" lazyload="on">
             <div><p>Frederiksborg Castle - Denmark</p></div>
         </a>
 
-        <a class="kilkenny-castle" lazyload="on">
+        <a class="lazy kilkenny-castle" lazyload="on">
             <div><p>Kilkenny Castle - Ireland</p></div>
         </a>
 
-        <a class="peles-castle" lazyload="on">
+        <a class="lazy peles-castle" lazyload="on">
             <div><p>Peles Castle - Romania</p></div>
         </a>
 
-        <a class="jemeppe-castle" lazyload="on">
+        <a class="lazy jemeppe-castle" lazyload="on">
             <div><p>Jemeppe Castle - Belgium</p></div>
         </a>
 
-        <a class="prague-castle" lazyload="on">
+        <a class="lazy prague-castle" lazyload="on">
             <div><p>Prague Castle - Czech Republic</p></div>
         </a>
 
-        <a class="almourol-castle" lazyload="on">
+        <a class="lazy almourol-castle" lazyload="on">
             <div><p>Almourol Castle - Portugal</p></div>
         </a>
 
-        <a class="pena-palace" lazyload="on">
+        <a class="lazy pena-palace" lazyload="on">
             <div><p>Pena Palace - Portugal</p></div>
         </a>
 
-        <a class="vufflens-castle">
+        <a class="lazy vufflens-castle">
             <div><p>Vufflens Castle - Switzerland</p></div>
         </a>
 
-        <a class="hohenwerfen-palace">
+        <a class="lazy hohenwerfen-palace">
             <div><p>Hohenwerfen Castle - Austrian</p></div>
         </a>
     </div>
 </section>
+ 
 <script>
-    window.addEventListener('load', function() {
-      let allimages= document.getElementsByTagName('a');   
-      for (const i of allimages) {
-          i.setAttribute('src', i.getAttribute('data-src')); 
-      }            
-    }, false)
+   $('.lazy').Lazy({
+        // your configuration goes here
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        visibleOnly: true,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
 </script>
+
+
 
         </main>
 
@@ -164,6 +172,6 @@
     </section>
 </footer>
     </div>
-    
+   
 </body>
 </html>
