@@ -21,7 +21,7 @@
 
 @keyframes image-loading {
     0% { opacity: 0;}
-    50% { opacity: 0.5; }
+    //50% { opacity: 0.5; }
     100% { opacity: 1; }
 }
 
@@ -54,7 +54,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -70,7 +70,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -86,7 +86,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -102,7 +102,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -118,7 +118,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -135,7 +135,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -151,7 +151,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -167,7 +167,7 @@
             background-size: cover;
             @include global-ancher;
             opacity: 0;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -183,7 +183,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -199,7 +199,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -215,7 +215,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -231,7 +231,7 @@
             background-size: cover;
             opacity: 0;
             @include global-ancher;
-            animation: image-loading 2s forwards;
+            animation: image-loading 5s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -242,8 +242,8 @@
             }
         }
 
-        @for $i from 1 through 10 {
-            & a:nth-child(#{$i}) { animation-delay: $i * 0.15s; }
+        @for $i from 1 through 13 {
+            & a:nth-child(#{$i}) { animation-delay: $i * 0.3s; }
         }
     }
 }
