@@ -19,6 +19,12 @@
     font-weight: bold;
 }
 
+@keyframes image-loading {
+    0% { opacity: 0;}
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
 .gallery-container {
     background-color: #DFDBE5;
     background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -46,7 +52,9 @@
         & .boldt-castle {
             background-image: url('../assets/gallery/Boldt-Castle.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -60,7 +68,9 @@
         & .corvins-castle {
             background-image: url('../assets/gallery/CorvinsCastle_Transylvania.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -74,7 +84,9 @@
         & .egeskov-castle {
             background-image: url('../assets/gallery/Egeskov_Slot_spejling_Edit_2.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -88,7 +100,9 @@
         & .frederiksborg-castle {
             background-image: url('../assets/gallery/Frederiksborg_Castle_and_boat_crop.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -102,7 +116,9 @@
         & .kilkenny-castle {
             background-image: url('../assets/gallery/Kilkenny-castle.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -117,7 +133,9 @@
         & .peles-castle {
             background-image: url('../assets/gallery/Chateau_Peles.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -131,7 +149,9 @@
         & .jemeppe-castle {
             background-image: url('../assets/gallery/chateaujemeppebr.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -146,6 +166,8 @@
             background-image: url('../assets/gallery/pragueCastle-1024x668.jpg');
             background-size: cover;
             @include global-ancher;
+            opacity: 0;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -159,7 +181,9 @@
         & .almourol-castle {
             background-image: url('../assets/gallery/Almourol Castle.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -173,7 +197,9 @@
         & .pena-palace {
             background-image: url('../assets/gallery/pena-national-palace.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -187,7 +213,9 @@
         & .vufflens-castle {
             background-image: url('../assets/gallery/Vufflens-Castle.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -201,7 +229,9 @@
         & .hohenwerfen-palace {
             background-image: url('../assets/gallery/hohenwerfen_castle.jpg');
             background-size: cover;
+            opacity: 0;
             @include global-ancher;
+            animation: image-loading 2s forwards;
             div { @include global-div; }
 
             &:hover div {
@@ -210,6 +240,10 @@
                 url('../assets/gallery/hohenwerfen_castle.jpg'), no-repeat, center;
                 background-size: cover;
             }
+        }
+
+        @for $i from 1 through 10 {
+            & a:nth-child(#{$i}) { animation-delay: $i * 0.15s; }
         }
     }
 }
