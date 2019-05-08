@@ -14,7 +14,7 @@
         align-items: top;
 
         & article {
-            max-width: 18%;
+            max-width: 18rem;
             background: rgba(0,0,0,0.7);
             border: 1px solid black;
             padding: 1rem;
@@ -76,6 +76,16 @@
 @media screen and (max-width: 400px) {
     #vote {
         & .vote-castles { width: 70%; }
+    }
+}
+
+@media screen and (max-width: 220px) {
+    #vote {
+        & .vote-castles { 
+            & article {
+                & p span { font-size: 10px; }
+            } 
+        }
     }
 }
     

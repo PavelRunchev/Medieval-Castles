@@ -1,6 +1,6 @@
 .site-content h3 { padding-top: 0;}
 
-#post-england {
+.post-england {
     @mixin picture {
         width: 50%;
         height: 300px;
@@ -67,9 +67,10 @@
     }
 }
 
+
 @media screen and (max-width: 1200px) {
-    #post-england {
-        & .spain-castles {
+    .post-england {
+        & .england-castles {
             & article:nth-child(even),
             & article:nth-child(odd) { 
                 & img { margin: 1rem 2rem 1rem 1rem; } 
@@ -80,14 +81,13 @@
 
 
 @media screen and (max-width: 1024px) {
-    #post-england {
+    .post-england {
         .england-castles {
             & article {
                 & h3 { 
                     font-size: 18px; 
                     margin-top: 0;
-                    padding-top: 0;
-                    
+                    padding-top: 0;    
                 }
 
                 & p { color: blue;}
@@ -98,7 +98,7 @@
 
 
 @media screen and (max-width: 800px) {
-    #post-england {
+    .post-england {
         & .england-castles {
             & article:nth-child(even),
             & article:nth-child(odd) { 
@@ -119,12 +119,11 @@
 
 
 @media screen and (max-width: 700px) {
-    #post-england {
+    .post-england {
         & .england-castles {
             & article:nth-child(even),
             & article:nth-child(odd) {
                 
-
                 & h3 { 
                     font-size: 14px; 
                     margin-top: 0;
@@ -136,24 +135,29 @@
     }
 }
 
-@media screen and (max-width: 600px) {
-    img { margin: 0; }
-
-    #post-england {
+@media screen and (max-width: 700px) {
+    .post-england {
         & .england-castles {
+            display: flex;
+            flex-direction: column;
+            padding: 2%;
+            width: 23rem;
+
             & article:nth-child(even),
             & article:nth-child(odd) {
-                margin: 0;
-                width: 90%;
+                padding: 0;
+                margin: 0 auto;
+                width: 100%;
 
                 & img {
                     float: unset;
                     width: 100%;
-                    margin: 0;
+                    margin: 2% auto;
                 }
                 & h3 {
                     text-align: center;
                     margin-top: 2rem;
+                    width:  100%;
                 }
                 & p {
                     display: block;
@@ -161,6 +165,14 @@
                     padding: 0;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .post-england {
+        & .england-castles {
+            width: 90%;
         }
     }
 }

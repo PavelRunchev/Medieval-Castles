@@ -1,10 +1,10 @@
+$fullWidth: 100%;
 
-
-#signin {
+.signin {
     @mixin signin-form {
         font-family: 'Lato', serif;
         display: inline-block;
-        width: 25%;
+        width: 20rem;
         height: 60vh;
         border: 2px solid black;
         margin-bottom: 4rem;
@@ -16,8 +16,9 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    overflow: hidden;
    
-    & #castle {
+    & .castle {
         margin-top: 3rem;
         background: linear-gradient(rgba(0,0,0,0.9),rgba(217,75,107,0.6)), 
         url('../assets/neuschwanstein.jpg'), no-repeat, center;
@@ -26,23 +27,41 @@
         background-size: cover;
         border-top-left-radius: 0.5rem;
         border-bottom-left-radius: 0.5rem;
+        overflow: hidden;
         @include signin-form;
+        display: flex;
+        flex-direction: column;
 
         & h3 { 
-            padding-bottom: 20rem; 
-            margin-top: 0;
-            padding-top: 3rem;
+            margin: 20% auto;
+            padding: 0;
             color: #D94B6B;
             text-shadow: 1px 1px 2px rgba(0,0,0, 1);
         }
+
+        & .policy {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            
+            & p { 
+                display: inline-block;
+                text-align: center;
+                padding: 0;
+                vertical-align: middle;
+            }
+        }        
     }
 
-    & #signin-form {
+    & .signin-form {
         margin-top: 3rem;
         background: lightgrey;
         border-top-right-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
         @include signin-form;
+        overflow: hidden;
 
         & .times {
             float: right;
@@ -50,21 +69,23 @@
             color: rgb(217,75,107);
         }
 
+        & div { 
+            width: 40%;
+            color: grey;
+            border-bottom: 1px solid grey;
+            margin: 5% auto;
+            font-style: italic;
+        }
+
+
         & form {
-                height: 100%;
+                height: $fullWidth;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-
-                & div { 
-                    color: grey;
-                    border-bottom: 1px solid grey;
-                    margin-bottom: 20%;
-                    margin-top: 2rem;
-                    font-style: italic;
-                }
-
+                padding: 2% 1%;
+                
                 & p {
                     & label {
                         display: block;
@@ -93,24 +114,25 @@
                             border-bottom: 1px solid grey;
                             padding: 0.1rem 0;
                             color: grey; 
+                            font-size: 12px;
 
                             //focus placeholder for Chrome
                             &:focus,
-                            &:focus::-webkit-input-placeholder, {
+                            &:focus::-webkit-input-placeholder {
                                 border-color: rgb(217,75,107);
                                 color: rgb(217,75,107);
                             }
 
                             //focus placeholder for FireFox 19+
                             &:focus,
-                            &:focus::-moz-placeholder, {
+                            &:focus::-moz-placeholder {
                                 border-color: rgb(217,75,107);
                                 color: rgb(217,75,107);
                             }
                         
                             //focus placeholder for FireFox 18-
                             &:focus,
-                            &:focus:-moz-placeholder, {
+                            &:focus:-moz-placeholder {
                                 border-color: rgb(217,75,107);
                                 color: rgb(217,75,107);
                             }
@@ -125,12 +147,14 @@
                     }
                 }
 
-                & span {
-                    margin-top: 5rem;
+                & .signin-buttons {
+                    margin-top: 10%;
+                    display: flex;
+                    flex-direction: column;
 
-                    & #submit {
+                    & .submit {
                         border: none;
-                        margin: 0 3rem 3rem 3rem;
+                        margin: 2% auto;
                         background: rgb(217,75,107);
                         color: white;
                         padding: 0.5rem 2rem;
@@ -149,8 +173,9 @@
                     }
 
                     & .create-account {
-                        font-size: 16px;
+                        font-size: 14px;
                         color: #9766C2;
+                        margin: 6.5% auto;
                         &:hover { color: rgb(217,75,107); }
                     }
                 }
@@ -158,119 +183,70 @@
     }
 }
 
-@media screen and (max-width: 1740px) {
-    #signin {
-        & #castle,
-        & #signin-form{
-            width: 30%;
-
-            & form {
-                & #signin-buttons > #submit {
-                    margin: 0;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    #signin {
-        & #castle,
-        & #signin-form{
-            width: 35%;
-
-            & form {
-                & #signin-buttons > #submit {
-                    margin: 0.9rem;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    #signin {
-        & #castle,
-        & #signin-form{
-            & form {
-                & #signin-buttons > #submit {
-                    margin: 1rem;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    #signin {
-        & #signin-form{
-            & form {
-                & #signin-buttons > #submit {
-                    margin: 1.3rem 1rem;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 880px) {
-    #signin {
-        & #signin-form{
-            & form {
-                & p {
-                    & span {
-                        & i { right: 7rem; top: -1rem }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #signin {
-        & #castle,
-        & #signin-form {
-           width: 45%;
-
-           & form {
-            & p {
-                & span {
-                    & i { right: 12.5rem; top: 0 }
-                }
-            }
-
-            & #signin-buttons > #submit {
-                margin: 0 1rem 2rem 1rem;
-            }
-        }
-        }
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #signin {
+@media screen and (max-width: 700px) {
+    .signin {
         display: block;
-        & #castle,
-        & #signin-form {
+        margin: 5% auto;
+        width: 25rem;
+        height: none;
+        overflow: unset;
+
+        & .castle,
+        & .signin-form {
             display: block;
-            width: 80%;
+            width: $fullWidth;
             margin: 0 auto;
+            padding: 0;
+            overflow: hidden;
+            height: none;
         }
 
-        & #castle {
+        & .castle {
             margin-top: 3rem;
             border-top-right-radius: 0.5rem;
-            border-bottom-left-radius: 0.5rem;
+            border-top-left-radius: 0.5rem;
             border-bottom-left-radius: unset;
+            border-right: 2px solid black;
+            overflow: hidden;
+            & > P { margin-top: 60%; }
         }
 
-        & #signin-form {
-            margin-bottom: 3rem;
+        & .signin-form {
+            padding: 5% 0;
             border-top-right-radius: unset;
             border-bottom-right-radius: 0.5rem;
             border-bottom-left-radius: 0.5rem;
         }
     }
 }
+
+@media screen and (max-width: 335px) {
+    .signin {
+        width: 90%;
+
+        & .castle {
+            & > P { display: none; }
+        }
+
+        & .signin-form {
+           & form p label { font-size: 10px; }
+        }
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .signin {
+        & .signin-form {
+            & form,
+            & form p,
+            & form p span { width: $fullWidth; }
+            & form p span i { display: none; }
+            & form p span input { width: 85%; }
+            & form p label { padding-left: 7%; }
+        }
+    }
+}
+
+
+
 

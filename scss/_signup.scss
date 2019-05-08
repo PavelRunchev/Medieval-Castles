@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 
     & > h3 {
         padding-top: 1rem;
@@ -56,21 +57,21 @@
 
                     //focus placeholder for Chrome
                     &:focus,
-                    &:focus::-webkit-input-placeholder, {
+                    &:focus::-webkit-input-placeholder {
                         border-color: rgb(217,75,107);
                         color: rgb(217,75,107);
                     }
 
                     //focus placeholder for FireFox 19+
                     &:focus,
-                    &:focus::-moz-placeholder, {
+                    &:focus::-moz-placeholder {
                         border-color: rgb(217,75,107);
                         color: rgb(217,75,107);
                     }
                 
                     //focus placeholder for FireFox 18-
                     &:focus,
-                    &:focus:-moz-placeholder, {
+                    &:focus:-moz-placeholder {
                         border-color: rgb(217,75,107);
                         color: rgb(217,75,107);
                     }
@@ -206,6 +207,37 @@
            }
 
            & .buttons #signup-submit { margin-left: 0; }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #signup {
+        & > #signup-form {
+           width: 75%;
+        }
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #signup {
+        & h3 { font-size: 18px; }
+        & > #signup-form {
+            width: 97%;
+            padding: 5% 1%;
+            & > .field > label { font-size: 10px; padding-left: 5%; }
+            & > p > span > i { display: none; }
+        }
+
+        & #signup-form .check span label { font-size: 10px; }
+
+        & #signup-form p:nth-of-type(10) {
+            display: flex;
+            flex-direction: column;
+            & #signup-submit,
+            & a {
+                margin: 4% auto;
+            }
         }
     }
 }

@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "docs",
+    "ignore": [
+      "firebase.json",
+      "Rakefile",
+      "CNAME",
+      "README.md",
+      "**/node_modules/**"
+    ]
+  }
+}

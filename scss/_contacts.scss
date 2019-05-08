@@ -3,6 +3,7 @@
 #contacts {
     margin: 0 auto;
     background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    overflow: hidden;
     
     & .contacts-description {
         display: inline-block;
