@@ -7,13 +7,14 @@ layout: site
 	<h3>Beautiful Castles</h3>
 	<p>Selected to view them!</p>
 
+
 <ul class="listing posts">
 	{% for post in site.posts %}
 	<li>
 		<a href="{{ site.baseurl }}{{ post.url }}">
 			<article>
 				<p class="title">{{ post.title }}</p>
-				<p>Blog article to castles in country</p>
+				<p>Article blog to castles in country</p>
 				<span class="date">date - {{ post.date | date_to_string }}</span>
 			</article>
 		</a>

@@ -3,18 +3,19 @@ layout: site
 title: Sign In
 permalink: /signin/
 ---
-<section id="signin">
-        <article id="castle">
+<section class="signin">
+        <article class="castle">
             <h3>Sign In</h3>
-            <p>Privacy policy</p>
+            <div class="policy">
+                <p>Privacy policy</p>
+            </div>            
         </article>
-        <article id="signin-form">
+        <article class="signin-form">
                 <a href="/" class="times">
                     <i class="fas fa-times"></i>
                 </a>
-                
-            <form action="#" method="GET">
-                    <div>Please fill all fields!</div>
+                <div>Please fill all fields!</div>
+            <form action="#" method="GET">                    
                     <p class="field">
                         <label for="username">Username</label>
                         <span>
@@ -30,8 +31,8 @@ permalink: /signin/
                             <input type="password" name="password" id="Password" placeholder="********">
                         </span>
                     </p>
-                    <span id="signin-buttons">
-                        <button id="submit">Sign In</button>
+                    <span class="signin-buttons">
+                        <button class="submit">Sign In</button>
                         <a href="{{ site.baseurl }}/signup/" class="create-account">create account</a>
                     </span>
             </form>
