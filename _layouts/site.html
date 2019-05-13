@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ site.title }}</title>
-    <link rel="icon" type="image/png" sizes="100x100" href="{{ site.baseurl }}/assets/castle-logo-design.png">
-    <link rel="shortcut icon" type="image/x-icon" sizes="100x100" href="{{ site.baseurl }}/assets/castle-logo-design.ico">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="icon" type="image/png" sizes="100x100" href=".{{ site.baseurl }}/assets/castle-logo-design.png">
+    <link rel="shortcut icon" type="image/x-icon" sizes="100x100" href=".{{ site.baseurl }}/assets/castle-logo-design.ico">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/jquery.lazy/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="./assets/jquery.lazy/jquery.lazy.min.js"></script>
 </head>
 <body class="{% if page.type %}{{page.type}} {% endif %}{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %}">
     <div class="site">
