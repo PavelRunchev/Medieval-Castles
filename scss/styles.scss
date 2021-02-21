@@ -1,32 +1,27 @@
-//@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
-@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
-@import url('../fontawesome/css/all.min.css');
+//CSS IT Arhitecture
+@import './Generic/_generic.reset';
 
-@import 'reset';
-@import 'typography';
-@import 'layout';
-@import 'navigation';
-@import 'animations';
-@import 'site-header';
-@import 'site-footer';
-@import 'support';
-@import 'special-thanks';
-@import 'services';
-@import 'contacts';
-@import 'signin';
-@import 'signup';
-@import 'about';
-@import 'vote';
+@import './Settings/_settings.fonts';
+@import './Settings/_settings.colors';
+@import './Settings/_settings.breakpoints';
 
-//post
-@import 'spain-castles';
-@import 'france-castles';
-@import 'germany-castles';
-@import 'england-castles';
+@import './Tools/_tools.mixin';
 
-@import 'posts';
-@import 'gallery';
+@import './Objects/_objects.container';
+
+@import './Elements/_element.h1';
+@import './Elements/_element.h2';
+@import './Elements/_element.h4';
+@import './Elements/_element.h5';
+@import './Elements/_element.span';
+
+@import './Components/_component.navigation';
+@import './Components/_component.header';
+@import './Components/_component.home';
+@import './Components/_component.footer';
+
+
+
+
 
 

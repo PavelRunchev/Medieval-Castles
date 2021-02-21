@@ -1,0 +1,38 @@
+
+
+.u-form-btn-close {
+	cursor: pointer;
+	font-size: 20px;
+	color: $secondary-color;
+	transition: color 0.3s ease-out;
+
+	&:hover {
+		color: lightgray;
+	}
+}
+
+.u-form-btn {
+	display: block;
+	margin: 3% auto !important;
+	padding: 0.5rem 2.4rem 0.5rem 1.1rem;
+	border: none;
+	border-radius: 2rem;
+}
+
+.fa-spinner {
+	opacity: 0;
+	animation: loading-btn 2s linear infinite both;
+}
+
+.u-form-forgot-btn {
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 16px;
+	color: #1266F1 !important;
+	font-weight: normal;
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		color: $secondary-color !important;
+	}
+}

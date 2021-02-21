@@ -1,0 +1,100 @@
+
+
+@mixin font-size($size) {
+	font-size: $size;
+}
+
+@mixin card-content($size, $marginY, $marginX) {
+	text-align: center;
+	font-size: $size;
+	font-weight: 400;
+	font-style: italic;
+	margin: $marginY $marginX;
+}
+
+@mixin primary-box-shadow-black {
+	-webkit-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 11px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 11px 0px rgba(50, 50, 50, 0.75);
+}
+
+@mixin secondary-box-shadow-white {
+	-webkit-box-shadow: 0px 0px 11px 0px rgba(255,255,255, 0.75);
+	-moz-box-shadow:    0px 0px 11px 0px rgba(255,255,255, 0.75);
+	box-shadow:         0px 0px 11px 0px rgba(255,255,255, 0.75);
+}
+
+@mixin none-box-shadow-white {
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(255,255,255, 0.75);
+	-moz-box-shadow:    0px 0px 0px 0px rgba(255,255,255, 0.75);
+	box-shadow:         0px 0px 0px 0px rgba(255,255,255, 0.75);
+}
+
+@mixin none-box-shadow-black {
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(50,50,50, 0);
+	-moz-box-shadow:    0px 0px 0px 0px rgba(50,50,50, 0);
+	box-shadow: 0px 0px 0px 0px rgba(50,50,50, 0);
+}
+
+@mixin card-hover-effect-white($url-castle) {
+	background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), $url-castle;
+	background-size: cover;
+	background-position: center;
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		background: linear-gradient(rgba(217,75,107,0.6), rgba(217,75,107,0.6)), $url-castle;
+		background-size: cover;
+		background-position: center;
+		@include none-box-shadow-black;
+		transform: scale(0.99);
+	}
+}
+
+@mixin card-hover-effect-black($url-castle) {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), $url-castle;
+	background-size: cover;
+	background-position: center;
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		background: linear-gradient(rgba(217,75,107,0.2), rgba(217,75,107,0.2)), $url-castle;
+		background-size: cover;
+		background-position: center;
+		@include none-box-shadow-black;
+		transform: scale(0.99);
+	}
+}
+
+@mixin card-opacity-black($url-castle) {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), $url-castle;
+	background-size: cover;
+	background-position: center;
+}
+
+
+@mixin gallery-img($url) {
+	@include card-hover-effect-black($url);
+
+	&:hover div {
+		opacity: 1;
+	}
+}
+
+@mixin image-float-left {
+	float: left;
+	margin: 0% 5% 2% 0%;
+}
+
+@mixin image-float-right {
+	float: right;
+	margin: 0% 0% 2% 5%;
+}
+
+@mixin image-for-phone-without-float {
+	@include for-phone-only {
+		width: 100%;
+		float: none;
+		margin: 0 0 5% 0;
+	}
+}

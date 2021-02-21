@@ -1,0 +1,169 @@
+
+.c-vote {
+	width: 100%;
+
+	&-header {
+		width: 216px;
+	}
+
+	.c-vote-list {
+		width: 100%;
+		margin: 2% 0;
+		padding: 0;
+		display: grid;
+		justify-content: space-around;
+		align-content: center;
+		align-items: center;
+
+		@include for-phone-only {
+			grid-template-columns: 96%;
+			grid-template-rows: auto auto auto auto;
+		}
+		
+		@include for-tablet-portrait-up {
+			grid-template-columns: 48% 48%;
+			grid-template-rows: auto auto;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-template-columns: 24% 24% 24% 24%;
+			grid-template-rows: 550px;
+		}
+
+		@include for-desktop-up {
+			grid-template-columns: 22% 22% 22% 22%;
+			grid-template-rows: 570px;
+		}
+
+		@include for-big-desktop-up {
+			grid-template-columns: 18% 18% 18% 18%;
+			grid-template-rows: 570px;
+		}
+	}
+
+	&-article {
+		width: 100%;
+		height: auto;
+		padding: 10%;
+		color: $secondary-color;
+
+		@include for-tablet-portrait-up {
+			height: 450px;
+		}
+
+		@include for-tablet-landscape-up {
+			height: 100%;
+		}
+	}
+
+	&-spain-castles {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		@include card-opacity-black(url('../assets/Spain Castles/alcazar_of_segovia.jpg'));
+	}
+
+	&-france-castles {
+		@include card-opacity-black(url('../assets/France Castles/Chenonceau.jpg'));
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
+	}
+
+	&-germany-castles {
+		@include card-opacity-black(url('../assets/Germany Castles/schwerin-palace-germany-29182-1920x1200.jpg'));
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+		}
+	}
+
+	&-england-castles {
+		@include card-opacity-black(url('../assets/England Castles/Warwick-Castle.jpg'));
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-column: 4 / 5;
+			grid-row: 1 / 2;
+		}
+	}
+
+	&-btn {
+		cursor: pointer;
+		outline: none;
+		border: none;
+		text-transform: uppercase;
+		color: $secondary-color;
+		background-color: $primary-color;
+		border-radius: 2rem;
+		padding: 0.5rem 2rem;
+		font-weight: bold;
+		margin-top: 15%;
+		transition: all 0.3s ease-out;
+
+		&:hover {
+			background-color: $secondary-color;
+			color: $primary-color;
+		}
+	}
+
+	.e-span {
+		@include for-phone-only {
+			font-size: 16px;
+		}
+
+		@include for-tablet-portrait-up {
+			font-size: 16px;
+		}
+
+		@include for-tablet-landscape-up {
+			font-size: 14px;
+		}
+
+		@include for-desktop-up {
+			font-size: 14px;
+		}
+
+		@include for-big-desktop-up {
+			font-size: 16px;
+		}
+	}
+
+	&-modal-title {
+		margin: 0 auto;
+		color: $third-color;
+	}
+
+	&-modal-body {
+		text-align: center;
+		color: $third-color;
+	}
+}

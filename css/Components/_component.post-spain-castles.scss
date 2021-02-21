@@ -1,0 +1,41 @@
+
+.c-post-spain-castles {
+	width: 100%;
+
+	.o-header {
+		width: 375px;
+
+		@include for-phone-only {
+			width: 254px;
+		}
+	}
+
+	.o-secondary-container {
+		@include for-phone-only {
+			width: 96%;
+		}
+
+		@include for-tablet-portrait-up {
+			width: 90%;
+		}
+
+		@include for-tablet-landscape-up {
+			width: 80%;
+		}
+
+		@include for-desktop-up {
+			width: 70%;
+		}
+	}
+
+	&-img-la-mota,
+	&-img-alcazar-of-segovia {
+		@include image-float-left;
+		@include image-for-phone-without-float;
+	}
+
+	&-img-olite {
+		@include image-float-right;
+		@include image-for-phone-without-float;
+	}
+}

@@ -1,0 +1,41 @@
+
+.o-container {
+	width: 100%;
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto auto auto;
+}
+
+.o-secondary-container {
+	display: block;
+	margin: 5% auto;
+	width: 70%;
+	@include primary-box-shadow-black;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.06);
+	padding: 2% 3% 2% 3%;
+
+	@include for-phone-only {
+		width: 90%;
+	}
+
+	@include for-tablet-portrait-up {
+		width: 70%;
+	}
+}
+
+.o-third-container {
+	margin: 0 auto;
+	width: 240px;
+
+	@include for-phone-only {
+		width: 100% !important;
+	}
+}
+
+.o-castle-container {
+	width: 100%;
+	height: auto;
+	margin: 7% 0;
+}

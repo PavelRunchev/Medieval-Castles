@@ -1,0 +1,12 @@
+
+.o-btn {
+	cursor: pointer;
+	background-color: $primary-color;
+	color: $secondary-color;
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		background-color: $secondary-color;
+		color: $primary-color;
+	}
+}

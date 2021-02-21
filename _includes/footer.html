@@ -1,61 +1,101 @@
-<footer class="site-footer">
-    <section class="footer logo">
-        <img src="./assets/creative design.jpg" alt="logo">
-        <img src="./assets/logotipo-harmony.jpg" alt="logo">
-        <img src="./assets/colorwise-owl-creative-logo-designer.png" alt="logo">
-        <img src="./assets/phoenix-logo.jpg" alt="logo">
-    </section>
+<footer class="c-footer">
+    <section class="c-footer-container">
+        <article class="c-footer-contact-us">
+                <h4 class="c-footer-title">Contact us</h4>
+                    <p class="c-footer-contact-us-content">
+                        <i class="fas fa-map-marker-alt"></i>&nbsp; Tintqva Avenue 15-17
+                    </p>
+                    <p class="c-footer-contact-us-content">
+                        <i class="fas fa-globe-europe"></i>&nbsp; Sofia, 1113 BG
+                    </p>
+                    <p class="c-footer-contact-us-content">
+                        <i class="far fa-clock"></i>
+                        &nbsp; Mon - Sat <span class="e-span">9.00</span> - <span class="e-span">22.00</span>
+                    </p>
+                    <p class="c-footer-contact-us-content">
+                        <i class="fas fa-calendar-week"></i>
+                        &nbsp; Sunday - <span class="e-span">CLOSED</span>
+                    </p>
+                    <p class="c-footer-contact-us-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        &nbsp; 02 047 557 - 
+                        <span class="e-span">Free call</span>
+                    </p>
+        </article>
 
-    <section class="footer services">
-        <article class="contacts">
-                <h4>Contact us</h4>
-                <div class="avenue">
-                    <p><i class="fas fa-map-marker-alt"></i>&nbsp; Tintqva Avenue 15-17</p>
-                    <p>Sofia, 1113 BG.</p>
-                </div>
-                <div class="week">
-                    <p><i class="far fa-clock"></i>&nbsp; Mon - Sat 9.00 - 22.00 </p>
-                    <p>Sunday CLOSED</p>
-                </div>
-                <div class="phone">
-                    <p><i class="fas fa-phone"></i>&nbsp; 02 047 557 Free call</p>
-                </div>
+        <article class="c-footer-partners">
+            <h4 class="c-footer-title c-footer-partners-title">Partners</h4>
+            <div class="c-footer-partners-container">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-gitlab"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+            <p class="my-3 c-footer-noncommercial-container">
+                <i class="fab fa-creative-commons-nc"></i>&nbsp; <span class="font-weight-bold">- NonCommercial!</span>
+            </p>
         </article>
      
-        <article class="awesome">
-            <h4>Connect</h4>
-            <div>The Project is hosted to GitHub!</div>
-            <i class="fab fa-github"></i>
-            <i class="fab fa-gitlab"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin-in"></i>
-            <div><div class="fas fa-balance-scale"></div>&nbsp; MIT License.</div>
-        </article>
-
-        <article class="links">
-            <h4>Need help?</h4>
-            <ul>
-                <li><a href="{{ site.baseurl }}./signin/">My Account</a></li>
-                <li><a href="{{ site.baseurl }}./special-thanks/">Special Thanks</a></li>
-                <li><a href="{{ site.baseurl }}./contacts/">Contact Us</a></li>
-                <li><a href="{{ site.baseurl }}./support/">Support</a></li>
-                <li><a href="{{ site.baseurl }}./services/">Services</a></li>
+        <article class="c-footer-links">
+            <h4 class="c-footer-title c-footer-links-title">Contacts</h4>
+            <ul class="c-footer-links-list">
+                <li class="c-footer-links-item">
+                    <a class="c-footer-links-link" href="{{ site.baseurl }}/contacts/">Contact Us</a>
+                </li>
+                <li class="c-footer-links-item">
+                    <a class="c-footer-links-link" href="{{ site.baseurl }}/my-build/">My Build</a>
+                </li>
+                <li class="c-footer-links-item">
+                    <a class="c-footer-links-link" href="{{ site.baseurl }}/support/">Support</a>
+                </li>
+                <li class="c-footer-links-item">
+                    <a class="c-footer-links-link" href="{{ site.baseurl }}/services/">Services</a>
+                </li>
             </ul>
         </article>
-        
-        <article class="subscribe">
-            <h4>Subscribers</h4>
+
+        <article class="c-footer-subscribe">
+            <h4 class="c-footer-title">Subscribe</h4>
             <p>Make sure you dont miss interesting happening by joining our beautiful castles site!</p>
-            <label for="email">
-                <input type="email" id="email" placeholder="Your email adress">
-                <input type="submit" value="Subscribe" id="subscribe">
-            </label>
+            <form class="c-footer-form">
+                <input type="email" class="c-footer-input" placeholder="Your email adress">
+                <button 
+                    type="button" 
+                    class="c-footer-subscribe-btn"
+                    data-mdb-toggle="modal"
+                    data-mdb-target="#subscribe"
+                >Subscribe</button>
+
+                <!-- Modal -->
+                <div
+                    class="modal fade"
+                    id="subscribe"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                >
+                    <div class="modal-dialog">
+                    <div class="modal-content bg-light">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-dark mx-auto c-footer-subscribe-modal-title" id="exampleModalLabel"></h5>
+                        </div>
+                            <div class="modal-body text-dark text-center c-footer-subscribe-modal-body"></div>
+                            <div class="modal-footer">
+                                <button type="button" 
+                                    class="btn o-btn c-footer-form-btn mx-auto" data-mdb-dismiss="modal"
+                                    data-mdb-ripple-color="dark"
+                                >Thanks</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </article>
     </section>
     
-    <section class="footer copyright">
-        <div>&copy; 2018 Medieval Castles, All Rights Reserved!</div>
+    <section class="c-footer-copyright">
+        <div>&copy; 2018-2021 Medieval Castles. All Rights Reserved!</div>
         <div>Powered by Pavel Runchev</div>
     </section>
 </footer>

@@ -1,0 +1,42 @@
+
+.c-post-england-castles {
+	width: 100%;
+
+	.o-header {
+		width: 420px;
+
+		@include for-phone-only {
+			width: 285px;
+		}
+	}
+
+	.o-secondary-container {
+		@include for-phone-only {
+			width: 96%;
+		}
+
+		@include for-tablet-portrait-up {
+			width: 90%;
+		}
+
+		@include for-tablet-landscape-up {
+			width: 80%;
+		}
+
+		@include for-desktop-up {
+			width: 70%;
+		}
+	}
+
+	&-img-bamburgh,
+	&-img-bodiam {
+		@include image-float-left;
+		@include image-for-phone-without-float;
+	}
+
+	&-img-warwick,
+	&-img-windsor {
+		@include image-float-right;
+		@include image-for-phone-without-float;
+	}
+}

@@ -1,0 +1,43 @@
+
+.c-post-germany-castles {
+	width: 100%;
+
+	.o-header {
+		width: 440px;
+
+		@include for-phone-only {
+			width: 298px;
+		}
+	}
+
+	.o-secondary-container {
+		@include for-phone-only {
+			width: 96%;
+		}
+
+		@include for-tablet-portrait-up {
+			width: 90%;
+		}
+
+		@include for-tablet-landscape-up {
+			width: 80%;
+		}
+
+		@include for-desktop-up {
+			width: 70%;
+		}
+	}
+
+	&-img-neuschwanstein,
+	&-img-hohenschwangau,
+	&-img-lichtenstein {
+		@include image-float-left;
+		@include image-for-phone-without-float;
+	}
+
+	&-img-hohenzollern,
+	&-img-schwerin {
+		@include image-float-right;
+		@include image-for-phone-without-float;
+	}
+}

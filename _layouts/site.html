@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ site.title }}</title>
-    <link rel="icon" type="image/png" sizes="100x100" href=".{{ site.baseurl }}/assets/castle-logo-design.png">
-    <link rel="shortcut icon" type="image/x-icon" sizes="100x100" href=".{{ site.baseurl }}/assets/castle-logo-design.ico">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/jquery.lazy/jquery.lazy.min.js"></script>
+    <link rel="icon" type="image/png" sizes="100x100" href="{{ site.baseurl }}/assets/castle-logo-design.png">
+    <link rel="shortcut icon" type="image/x-icon" sizes="100x100" href="{{ site.baseurl }}/assets/castle-logo-design.ico">
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/bootstrap-resource/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/bootstrap-resource/mdb.rtl.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/bootstrap-resource/mdb.lite.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css">
 </head>
 <body class="{% if page.type %}{{page.type}} {% endif %}{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %}">
-    <div class="site">
+    <div class="site o-container">
         {% include navigation.html %}
 
         {% include header.html %}
@@ -23,6 +31,19 @@
 
         {% include footer.html %}
     </div>
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap-js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap-js/mdb.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap-js/popper.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap-js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap-js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/bootstrap-resource/bootstrap-js/scrolling.js"></script>
+
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/subscribe.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/ease-loading.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/my-label-effect.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/my-toastr.js"></script>
+    
 </body>
 </html>

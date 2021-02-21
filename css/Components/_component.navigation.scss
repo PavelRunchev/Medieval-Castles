@@ -1,0 +1,134 @@
+
+.c-navigation {
+	width: 100%;
+
+	@include for-phone-only {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		margin-bottom: 5%;
+	}
+	
+	@include for-tablet-portrait-up {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		display: grid;
+		grid-template-columns: 100px auto;
+		grid-template-rows: auto;
+	}
+
+	@include for-tablet-landscape-up {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		display: grid;
+		grid-template-columns: 80px auto 50% auto;
+		grid-template-rows: auto;
+	}
+
+	&-logo {
+		width: 80px;
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+			margin: 3% auto;
+		}
+
+		@include for-tablet-portrait-up {
+			display: inline-block;
+			padding: 10px;
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+
+		//animation: rotate-logo 15s ease 0.3s infinite forwards;
+	}
+
+	&-list {
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+			list-style: none;
+			width: 100%;
+			display: flex;
+			flex-flow: column wrap;
+			align-items: center;
+			justify-content: space-around;
+			padding: 0;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+			list-style: none;
+			width: 100%;
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			justify-content: space-around;
+			padding: 5px 0;
+			margin: 0;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+			list-style: none;
+			width: 100%;
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			justify-content: space-around;
+			padding: 5px 0;
+			margin: 0;
+		}
+
+		@include for-big-desktop-up {
+			padding: 10px 0;
+		}
+	}
+
+	&-item {
+		@include for-phone-only {
+			margin: 1.5% 0;
+		}
+	}
+
+	&-link {
+		display: inline-block;
+		cursor: pointer;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $primary-color !important;
+		border-bottom: 1px solid transparent;
+		transition: all ease-out 0.3s;
+		padding: 7px 0;
+
+		@include for-phone-only {
+			font-size: 24px;
+		}
+
+		@include for-tablet-portrait-up {
+			font-size: 16px;
+		}
+
+		@include for-tablet-landscape-up {
+			font-size: 18px;
+		}
+
+		@include for-desktop-up {
+			font-size: 20px;
+		}
+
+		@include for-big-desktop-up {
+			font-size: 20px;
+		}
+
+		&:hover {
+			border-color: $primary-color;
+			transform: scale(0.95);
+		}
+	}
+}

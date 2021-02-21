@@ -1,0 +1,95 @@
+
+.c-about {
+	width: 100%;
+
+	&-header {
+		width: 105px;
+	}
+
+	.o-secondary-container {
+		width: 60%;
+		margin-bottom: 0;
+
+		@include for-phone-only {
+			width: 90%;
+		}
+
+		@include for-tablet-portrait-up {
+			width: 80%;
+		}
+
+		@include for-desktop-up {
+			width: 60%;
+		}
+
+		@include for-big-desktop-up {
+			width: 50%;
+		}
+	}
+
+	&-contact {
+		color: $primary-color;
+		&:hover {
+			color: $third-color;
+		}
+	}
+
+	&-box-container {
+		margin: 1% auto 6% auto;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+
+		@include for-phone-only {
+			flex-flow: column wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 5% 0;
+			width: 100%;
+		}
+
+		@include for-tablet-portrait-up {
+			width: 490px;
+		}
+
+		@include for-tablet-landscape-up {
+			margin: 2% auto;
+			width: 500px;
+		}
+
+		@include for-desktop-up {
+			width: 600px;
+		}
+
+		@include for-big-desktop-up {
+			width: 800px;
+		}
+	}
+
+	&-box {
+		cursor: pointer;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: $primary-color;
+		@include primary-box-shadow-black;
+		transition: all 0.3s ease-out;
+		animation: shade-in 7s infinite both;
+
+		&:hover {
+			@include none-box-shadow-black;
+			transform: scale(0.95);
+		}
+
+		@include for-phone-only {
+			margin: 3% auto;
+		}
+	}
+
+	@for $i from 1 through 8 {
+		& span:nth-child(#{$i}) {
+			animation-delay: $i * 1s;
+			animation-play-state: running;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+
+.u-form {
+	margin-top: 5%;
+	@include secondary-box-shadow-white;
+	border-radius: 7px;
+	overflow: hidden;
+
+	&-content {
+		background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7));
+	}
+
+	&-header {
+		background: linear-gradient(rgba(217,75,107, 0.4), rgba(0,0,0, 0.7));
+	}
+
+	&-title {
+		font-size: 34px;
+		text-shadow: 0px 0px 2px rgba(0,0,0,0.6);
+		color: $secondary-color;
+	}
+
+	&-input-container {
+		width: 100%;
+		margin: 5% 0 0 0;
+	}
+
+	&-input {
+		display: block;
+		width: 100%;
+		background: transparent;
+		color: $secondary-color;
+		font-size: 19px;
+		font-weight: 300;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid $secondary-color;
+		padding: 10px 50px;
+		transition: all 0.3s ease-out;
+
+		&:focus {
+			border: none;
+			border-bottom: 1px solid $primary-color;
+		}
+	}
+
+	&-icon {
+		margin-left: 5px;
+		font-size: 22px;
+		position: relative;
+		top: -40px;
+		color: $secondary-color;
+		transition: all 0.4s ease-out;
+	}
+
+	&-input:focus ~ &-icon {
+		color: $primary-color;
+	}
+
+	&-label {
+		font-size: 18px;
+		color: $secondary-color;
+		font-weight: 300;
+		position: relative;
+		top: -40px;
+		left: 10px;
+		transition: all 0.4s ease-out;
+	}
+
+	&-input:focus ~ &-label {
+		transform: scale(0.8,0.8) rotate(0)skew(0,0) translate(-30px,-40px); 
+		-webkit-transform: scale(0.8,0.8) rotate(0)skew(0,0) translate(-30px,-40px); 
+		-moz-transform: scale(0.8,0.8) rotate(0)skew(0,0) translate(-30px,-40px); 
+		transform-origin: 50% 50%;
+		color: $primary-color;
+		font-weight: normal;
+	}
+
+	&-label-check {
+		font-size: 16px;
+		color: $secondary-color;
+		font-weight: 300;
+	}
+
+	&-footer {
+		background: linear-gradient(rgba(0,0,0, 0.7), rgba(217,75,107, 0.4));
+		display: block;
+	}
+
+}
+

@@ -1,17 +1,162 @@
-<nav class="navigation main">
-    <a href="{{ site.baseurl }}./" id="castle-logo">
-        <img src=".{{ site.baseurl }}/assets/castle-logo-design.png">
-    </a>
+<nav class="c-navigation">
+    <img class="c-navigation-logo" src="{{ site.baseurl }}/assets/castle-logo-design.png" alt="logo">
     
-    <ul id="nav">
-        <li><a href="{{ site.baseurl }}./">Home</a></li>
-        <li><a href="{{ site.baseurl }}./about/">About</a></li>
-        <li><a href="{{ site.baseurl }}./signin/">Sign In</a></li>
-        <li><a href="{{ site.baseurl }}./signup/">Sign Up</a></li>
-        <li><a href="{{ site.baseurl }}./vote/">Vote Castles</a></li>
-        <li><a href="{{ site.baseurl }}./gallery/">Gallery</a></li>
+    <ul class="c-navigation-list">
+        <li class="c-navigation-item">
+            <a class="c-navigation-link" href="{{ site.baseurl }}/">Home</a>
+        </li>
+        <li class="c-navigation-item">
+            <a class="c-navigation-link" href="{{ site.baseurl }}/about/">About</a>
+        </li>
+        <li class="c-navigation-item">
+            <a 
+                class="c-navigation-link" href="{{ site.baseurl }}/"
+                data-mdb-toggle="modal"
+                data-mdb-target="#sign-in"
+            >Sign In
+            </a>
+        </li>
+        <li class="c-navigation-item">
+            <a 
+                class="c-navigation-link" href="{{ site.baseurl }}/"
+                data-mdb-toggle="modal"
+                data-mdb-target="#sign-up"
+            >Sign Up</a>
+        </li>
+        <li class="c-navigation-item">
+            <a class="c-navigation-link" href="{{ site.baseurl }}/vote/">Vote</a>
+        </li>
+        <li class="c-navigation-item">
+            <a class="c-navigation-link" href="{{ site.baseurl }}/gallery/">Gallery</a>
+        </li>
     </ul>
 
-    <i class="fas fa-bars" id="bars"></i>
-    <i class="fas fa-times" id="times"></i>
+    <!-- Modal -->
+    <div
+    class="modal fade "
+    id="sign-in"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    >
+        <div class="modal-dialog u-form" style="width: 380px;">
+            <div class="modal-content u-form-content">
+                <div class="modal-header d-flex u-form-header">
+                    <h5 class="modal-title flex-grow-1 text-center font-weight-bold u-form-title" id="exampleModalLabel">Sign In</h5>
+                    <i
+                        class="fas fa-times d-inline u-form-btn-close"
+                        data-mdb-dismiss="modal"
+                    ></i>
+                </div>
+                <div class="modal-body">
+                    <form class="c-sign-in-form py-3">
+                        <div class="u-form-input-container col-12">
+                            <input type="text" class="u-form-input" name="username" placeholder="" autocomplete="username"/>
+                            <i class="fas fa-user mr-3 u-form-icon"></i>
+                            <label for="username" class="label-text u-form-label">Your username</label>
+                        </div>
+                      
+                        <div class="u-form-input-container col-12">
+                            <input type="password" class="u-form-input" name="password1" placeholder="" autocomplete="new-password"/>
+                            <i class="fas fa-key mr-3 u-form-icon"></i>
+                            <label for="password1" class="label-text u-form-label">Password</label>
+                        </div>
+
+                        <div class="d-flex justify-content-around">
+                             <!-- Checkbox -->
+                            <div class="form-check d-flex justify-content-center mb-4">
+                                <input class="form-check-input me-2" type="checkbox" value="" checked/>
+                                <label class="form-check-label u-form-label-check">Remember me</label>
+                            </div>
+                            <div class="form-check d-flex justify-content-center mb-4">
+                                <a class="u-form-forgot-btn">Forgot password?</a>
+                            </div>
+                        </div>
+                       
+                    </form>
+                </div>
+                <div class="modal-footer u-form-footer">
+                    <button type="button" 
+                        class="o-btn u-form-btn c-sign-in-btn"
+                    ><i id="spinner" class="fas fa-spinner"></i> Sign In
+                    </button>
+                    <Button type="button" class="d-none u-form-btn-dissmis" data-mdb-dismiss="modal"></Button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div
+    class="modal fade "
+    id="sign-up"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    >
+        <div class="modal-dialog u-form">
+            <div class="modal-content u-form-content">
+                <div class="modal-header d-flex u-form-header">
+                    <h5 class="modal-title flex-grow-1 text-center font-weight-bold u-form-title" id="exampleModalLabel">Sign Up</h5>
+                    <i
+                        class="fas fa-times d-inline u-form-btn-close"
+                        data-mdb-dismiss="modal"
+                    ></i>
+                </div>
+                <div class="modal-body">
+                    <form class="c-sign-up-form">
+                        <div class="u-form-input-container col-12">
+                            <input type="text" class="u-form-input" name="name" placeholder="" autocomplete="name"/>
+                            <i class="fas fa-user mr-3 u-form-icon"></i>
+                            <label for="name" class="label-text u-form-label">Your name</label>
+                        </div>
+                        <div class="u-form-input-container col-12">
+                            <input type="text" class="u-form-input" name="your-username" placeholder="" autocomplete="username"/>
+                            <i class="fas fa-user mr-3 u-form-icon"></i>
+                            <label for="your-username" class="label-text u-form-label">Your username</label>
+                        </div>
+                        <div class="u-form-input-container col-12">
+                            <input type="text" class="u-form-input" name="email" placeholder="" autocomplete="email"/>
+                            <i class="fas fa-envelope mr-3 u-form-icon"></i>
+                            <label for="email" class="label-text u-form-label">Email</label>
+                        </div>
+                        <div class="u-form-input-container col-12">
+                            <input type="password" class="u-form-input" name="password" placeholder="" autocomplete="new-password"/>
+                            <i class="fas fa-key mr-3 u-form-icon"></i>
+                            <label for="password" class="label-text u-form-label">Password</label>
+                        </div>
+                        <div class="u-form-input-container col-12">
+                            <input type="password" class="u-form-input" name="password2" placeholder="" autocomplete="new-password"/>
+                            <i class="fas fa-key mr-3 u-form-icon"></i>
+                            <label for="password2" class="label-text u-form-label">Repeat password</label>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input me-2" type="checkbox" value="" checked/>
+                            <label class="form-check-label u-form-label-check">I have read and agree to the terms</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer u-form-footer">
+                    <button type="button" 
+                        class="o-btn u-form-btn c-sign-up-btn"
+                        data-mdb-dismiss="modal"
+                    ><i id="spinner" class="fas fa-spinner"></i> Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c-toastr">
+        <div class="c-toastr-title">
+            <h3 class="text-center"></h3>
+        </div>
+        <div class="c-toastr-body">
+            <i class="far fa-check-circle"></i>
+            <i class="far fa-times-circle"></i>
+        </div>
+    </div>
 </nav>

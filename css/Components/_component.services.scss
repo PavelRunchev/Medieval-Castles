@@ -1,0 +1,149 @@
+
+.c-services {
+	width: 100%;
+	
+	&-header {
+		width: 160px;
+	}
+
+	.e-h2 {
+		font-weight: 300;
+		@include font-size(45px);
+	}
+
+	&-conteiner {
+		width: 100%;
+		margin: 2% 0;
+		display: grid;
+		justify-content: space-around;
+
+		@include for-phone-only {
+			grid-template-columns: 95%;
+			grid-template-rows: auto auto auto auto;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-template-columns: 40% 40%;
+			grid-template-rows: auto auto;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-template-columns: 20% 20% 20% 20%;
+			grid-template-rows: auto;
+		}
+
+		@include for-desktop-up {
+			grid-template-columns: 17% 17% 17% 17%;
+			grid-template-rows: auto;
+		}
+	}
+
+	&-answer {
+		color: #20B2AA !important;
+		@include card-hover-effect-white(url('../assets/gallery/Almourol Castle.jpg'));
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+
+		@include for-tablet-portrait-up  {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+
+	&-elements {
+		color: #B8860B !important;
+		@include card-hover-effect-white(url('../assets/gallery/Egeskov_Slot_spejling_Edit_2.jpg'));
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		@include for-tablet-portrait-up  {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
+	}
+
+	&-ideas {
+		color: #ADD8E6 !important;
+		@include card-hover-effect-white(url('../assets/gallery/pragueCastle-1024x668.jpg'));
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+
+		@include for-tablet-portrait-up  {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+		}
+	}
+
+	&-question {
+		color: $primary-color !important;
+		@include card-hover-effect-white(url('../assets/gallery/Kilkenny-castle.jpg'));
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+		}
+
+		@include for-tablet-portrait-up  {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-column: 4 / 5;
+			grid-row: 1 / 2;
+		}
+	}
+
+	&-title {
+		font-weight: bold;
+		color: $third-color;
+		padding: 0 5%;
+
+		@include for-phone-only {
+			@include font-size(18px);
+		}
+
+		@include for-tablet-portrait-up {
+			@include font-size(20px);
+		}
+
+		@include for-tablet-landscape-up {
+			@include font-size(22px);
+		}
+
+		@include for-desktop-up {
+			@include font-size(24px);
+		}
+
+		@include for-big-desktop-up {
+			@include font-size(26px);
+		}
+	}
+}

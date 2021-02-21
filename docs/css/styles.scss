@@ -1,0 +1,49 @@
+//CSS IT Arhitecture
+@import './Generic/_generic.reset';
+
+@import './Settings/_settings.fonts';
+@import './Settings/_settings.colors';
+@import './Settings/_settings.breakpoints';
+
+@import './Tools/_tools.mixins';
+@import './Tools/_tools.animations';
+
+@import './Objects/_objects.container';
+@import './Objects/_objects.card';
+@import './Objects/_objects.icons';
+@import './Objects/_objects.header';
+@import './Objects/_objects.gallery-image';
+@import './Objects/_objects.picture';
+@import './Objects/_objects.button';
+@import './Objects/_objects.modal-background';
+
+@import './Elements/_element.h1';
+@import './Elements/_element.h2';
+@import './Elements/_element.h4';
+@import './Elements/_element.h3';
+@import './Elements/_element.h5';
+@import './Elements/_element.span';
+@import './Elements/_element.p';
+
+@import './Utilities/_utilities.vision';
+@import './Utilities/_utilities.form';
+@import './Utilities/_utilities.form-btn';
+
+@import './Components/_component.error404';
+@import './Components/_component.navigation';
+@import './Components/_component.header';
+@import './Components/_component.home';
+@import './Components/_component.footer';
+@import './Components/_component.services';
+@import './Components/_component.support';
+@import './Components/_component.contact';
+@import './Components/_component.my-build';
+@import './Components/_component.about';
+@import './Components/_component.vote';
+@import './Components/_component.gallery';
+@import './Components/_component.toastr';
+
+@import './Components/_component.post-spain-castles';
+@import './Components/_component.post-france-castles';
+@import './Components/_component.post-germany-castles';
+@import './Components/_component.post-england-castles';

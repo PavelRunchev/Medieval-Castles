@@ -3,21 +3,25 @@
 
 layout: site
 ---
+<div class="c-home">
+	<div class="o-header c-home-container-title">
+		<h2 class="e-h2">Beautiful Castles</h2>
+	</div>
+	
+	<h5 class="e-h5">Selected to view them!</h5>
 
-	<h3>Beautiful Castles</h3>
-	<p>Selected to view them!</p>
-
-
-<ul class="listing posts">
-	{% for post in site.posts %}
-	<li>
-		<a href="{{ site.baseurl }}./{{ post.url }}">
-			<article>
-				<p class="title">{{ post.title }}</p>
-				<p>Article blog to castles in country</p>
-				<span class="date">date - {{ post.date | date_to_string }}</span>
-			</article>
-		</a>
-	</li>
-	{% endfor %}
-</ul>
+	<ul class="c-home-list">
+		{% for post in site.posts %}
+		<li class="c-home-item">
+			<a class="c-home-link" href="{{ site.baseurl }}{{ post.url }}">
+				<article class="c-home-card">
+					<h4 class="c-home-card-title">{{ post.title }}</h4>
+					<p class="c-home-card-content">Several beautiful {{ post.title }}</p>
+					<p class="c-home-card-date">date - {{ post.date | date_to_string }}</p>
+				</article>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+	

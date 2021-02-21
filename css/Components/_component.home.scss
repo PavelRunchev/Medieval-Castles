@@ -1,0 +1,118 @@
+
+.c-home {
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+	width: 100%;
+	background-color: $background-primary-color;
+	padding: 2% 0;
+
+	&-container-title {
+		width: 310px;
+	}
+
+	.e-h2 {
+		color: $third-color;
+	}
+
+	.e-h5 {
+		font-size: 30px;
+		font-weight: 300;
+		color: $third-color;
+		margin: 2% 0;
+		font-style: italic;
+	}
+
+	&-list {
+		list-style: none;
+		width: 100%;
+		margin: 2% 0;
+		padding: 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+
+	&-item {
+		padding: 0 2%;
+		border-radius: 5px;
+		color: $third-color;
+		@include primary-box-shadow-black;
+
+		@include for-phone-only {
+			width: 90%;
+			height: 400px;
+			margin: 5% 0;
+		}
+
+		@include for-tablet-portrait-up {
+			width: 280px;
+			height: 400px;
+			margin: 5% 0;
+		}
+
+		@include for-tablet-landscape-up {
+			width: 20%;
+			height: 300px;
+			margin: 2% 0;
+		}
+
+		@include for-desktop-up {
+			width: 20%;
+			height: 400px;
+			margin: 2% 0;
+		}
+
+		@include for-big-desktop-up {
+			height: 600px;
+			margin: 2% 0;
+		}
+	}
+
+	&-item:nth-child(1) {
+		@include card-hover-effect-white(url('../assets/Spain Castles/castle_of_la_mota.jpg'));
+	}
+
+	&-item:nth-child(2) {
+		@include card-hover-effect-white(url('../assets/France Castles/montSaintMichel2.jpg'));
+	}
+
+	&-item:nth-child(3) {
+		@include card-hover-effect-white(url('../assets/Germany Castles/hohenzollern_castle.jpg'));
+	}
+
+	&-item:nth-child(4) {
+		@include card-hover-effect-white(url('../assets/England Castles/bodiam.jpg'));
+	}
+
+	&-link {
+		text-decoration: none;
+		cursor: pointer;
+		width: 100%;
+		height: 300px;
+	}
+
+	&-card {
+		width: 100%;
+		height: 100%;
+		padding: 4% 0;
+		color: $third-color;
+		transition: color 0.3s ease-out;
+
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+
+	&-card-title {
+		@include card-content(30px, 10%, 0);
+	}
+
+	&-card-content {
+		@include card-content(22px, 5%, 0);
+		padding: 0 15%;
+	}
+
+	&-card-date {
+		@include card-content(22px, 5%, 0);
+	}
+}

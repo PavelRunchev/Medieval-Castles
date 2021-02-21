@@ -1,0 +1,68 @@
+
+.c-header {
+	width: 100%;
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	background: linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0,0.8)), url('../../assets/neuschwanstein.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	@include for-phone-only {
+		height: 300px;
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@include for-tablet-portrait-up {
+		height: 100%;
+	}
+
+	&-title {
+		margin: 10% 0 5% 0;
+		@include for-phone-only {
+			@include font-size(40px);
+		}
+
+		@include for-tablet-portrait-up {
+			@include font-size(55px);
+		}
+
+		@include for-tablet-landscape-up {
+			@include font-size(60px);
+		}
+
+		@include for-desktop-up {
+			@include font-size(70px);
+		}
+
+		@include for-big-desktop-up {
+			@include font-size(100px);
+		}
+	}
+
+	.e-h4 {
+		margin-bottom: 4%;
+		@include for-phone-only {
+			@include font-size(22px);
+		}
+
+		@include for-tablet-portrait-up {
+			@include font-size(26px);
+		}
+
+		@include for-tablet-landscape-up {
+			@include font-size(28px);
+		}
+
+		@include for-desktop-up {
+			@include font-size(30px);
+		}
+
+		@include for-big-desktop-up {
+			@include font-size(40px);
+		}
+	}
+}

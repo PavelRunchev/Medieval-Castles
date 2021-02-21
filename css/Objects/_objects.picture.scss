@@ -1,0 +1,11 @@
+
+.o-picture {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	width: 45%;
+	height: auto;
+	@include primary-box-shadow-black;
+	border-radius: 5px;
+	transition: all 0.3s ease-out;
+}

@@ -1,0 +1,38 @@
+
+.o-icons {
+	display: block;
+	border-radius: 50%;
+	margin: 20% auto;
+	background-color: $secondary-color;
+	text-align: center;
+
+	@include for-phone-only {
+		width: 180px;
+		padding: 65px 0;
+		font-size: 50px;
+	}
+
+	@include for-tablet-portrait-up {
+		width: 180px;
+		padding: 70px 0;
+		font-size: 50px;
+	}
+
+	@include for-tablet-landscape-up {
+		width: 145px;
+		padding: 40px 0;
+		font-size: 50px;
+	}
+
+	@include for-desktop-up {
+		width: 145px;
+		padding: 50px 0;
+		font-size: 50px;
+	}
+
+	@include for-big-desktop-up {
+		width: 220px;
+		padding: 90px 0;
+		font-size: 50px;
+	}
+}

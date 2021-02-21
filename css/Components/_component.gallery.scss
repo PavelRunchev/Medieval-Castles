@@ -1,0 +1,392 @@
+
+.c-gallery {
+	width: 100%;
+
+	&-header {
+		width: 125px;
+	}
+
+	.e-h5 {
+		color: $third-color;
+		font-weight: 300;
+		text-decoration: none;
+		font-style: italic;
+		font-size: 30px;
+	}
+
+	&-container {
+		margin: 2% auto;
+		display: grid;
+		grid-gap: 20px;
+		justify-content: center;
+
+		@include for-phone-only {
+			width: 98%;
+			grid-template-columns: 100%;
+			grid-template-rows: 400px 400px 400px 400px 400px 400px 400px 400px 400px 400px 400px 400px;
+		}
+
+		@include for-tablet-portrait-up {
+			width: 92%;
+			grid-template-columns: 50% 50%;
+			grid-template-rows: 300px 300px 300px 300px 300px 300px;
+		}
+
+		@include for-tablet-landscape-up {
+			width: 80%;
+			grid-template-columns: 50% 50%;
+			grid-template-rows: 300px 300px 300px 300px 300px 300px;
+		}
+
+		@include for-desktop-up {
+			width: 85%;
+			grid-template-columns: 33% 33% 33%;
+			grid-template-rows: 300px 300px 300px 300px;
+
+		}
+
+		@include for-big-desktop-up {
+			grid-template-columns: 25% 25% 25% 25%;
+			grid-template-rows: 300px 300px 300px;
+		}
+	}
+
+	&-image-container {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		background: transparent;
+		cursor: pointer;
+		border-radius: 5px;
+		@include primary-box-shadow-black;
+	}
+
+	&-boldt-castle {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+
+	&-corvin-castle {
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
+
+		@include for-desktop-up {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
+
+		
+	}
+
+	&-egeskov-castle {
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		@include for-desktop-up {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+		}
+
+		
+	}
+
+	&-frederiksborg-castle {
+		grid-column: auto;
+		grid-row: auto;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+
+		@include for-desktop-up {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		@include for-big-desktop-up {
+			grid-column: 4 / 5;
+			grid-row: 1 / 2;
+		}
+	}
+
+	&-kilkenny-castle {
+		grid-column: auto;
+		grid-row: auto;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 5 / 6;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+
+		@include for-desktop-up {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+
+		@include for-big-desktop-up {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+	}
+
+	&--peles-castle {
+		grid-column: auto;
+		grid-row: auto;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 6 / 7;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 3 / 4;
+		}
+
+		@include for-desktop-up {
+			grid-column: 3 / 4;
+			grid-row: 2 / 3;
+		}
+
+		@include for-big-desktop-up {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+	}
+
+	&-jemeppe-castle {
+		grid-column: auto;
+		grid-row: auto;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 7 / 8;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+		}
+
+		@include for-desktop-up {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+
+		@include for-big-desktop-up {
+			grid-column: 3 / 4;
+			grid-row: 2 / 3;
+		}
+	}
+
+	&-prague-castle {
+		grid-column: auto;
+		grid-row: auto;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 8 / 9;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 4 / 5;
+		}
+
+		@include for-desktop-up {
+			grid-column: 2 / 3;
+			grid-row: 3 / 4;
+		}
+
+		@include for-big-desktop-up {
+			grid-column: 4 / 5;
+			grid-row: 2 / 3;
+		}
+	}
+
+	&-almourol-castle {
+		grid-column: auto;
+		grid-row: auto;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 9 / 10;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 1 / 2;
+			grid-row: 5 / 6;
+		}
+
+		@include for-desktop-up {
+			grid-column: 3 / 4;
+			grid-row: 3 / 4;
+		}
+
+		@include for-big-desktop-up {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+	}
+
+	&-pena-castle {
+		grid-column: auto;
+		grid-row: auto;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 10 / 11;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 5 / 6;
+		}
+
+		@include for-desktop-up {
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+		}
+
+		@include for-big-desktop-up {
+			grid-column: 2 / 3;
+			grid-row: 3 / 4;
+		}
+	}
+
+	&-vufflens-castle {
+		grid-column: auto;
+		grid-row: auto;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 11 / 12;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 1 / 2;
+			grid-row: 6 / 7;
+		}
+
+		@include for-desktop-up {
+			grid-column: 2 / 3;
+			grid-row: 4 / 5;
+		}
+
+		@include for-big-desktop-up {
+			grid-column: 3 / 4;
+			grid-row: 3 / 4;
+		}
+	}
+
+	&-hohenwerfen-castle {
+		grid-column: auto;
+		grid-row: auto;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 12 / 13;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 6 / 7;
+		}
+
+		@include for-desktop-up {
+			grid-column: 3 / 4;
+			grid-row: 4 / 5;
+		}
+
+		@include for-big-desktop-up {
+			grid-column: 4 / 5;
+			grid-row: 3 / 4;
+		}
+	}
+
+	&-img {
+		position: relative;
+		cursor: pointer;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		transition: all 0.3s ease-in;
+		z-index: -1;
+	}
+	
+	&-image-title {
+		display: none;
+		opacity: 0;
+		z-index: -1;
+		background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+		width: 100%;
+		height: 100%;
+		font-size: 24px;
+		font-weight: bold;
+		color: $secondary-color;
+		border-radius: 5px;
+		transform: translate(0px, -300px);
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s ease-in-out;
+
+		@include for-phone-only {
+			font-size: 18px;
+		}
+
+		@include for-tablet-portrait-up {
+			font-size: 18px;
+		}
+	}
+
+	&-image-container {
+		transition: all 0.3s ease-in;
+
+		&:hover {
+			transform: scale(0.99);
+			@include none-box-shadow-black;
+		}
+	}
+
+	&-image-container:hover &-img {
+		z-index: -1;
+	}
+
+	&-image-container:hover &-image-title {
+		@include for-phone-only {
+			transform: translate(0px, -400px);
+		}
+
+		@include for-tablet-portrait-up {
+			transform: translate(0px, -300px);
+		}
+		
+		display: flex;
+		animation: ease-show-in 0.8s ease-in-out 0.1s forwards;
+	}
+}

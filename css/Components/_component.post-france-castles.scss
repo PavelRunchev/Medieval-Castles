@@ -1,0 +1,41 @@
+
+.c-post-france-castles {
+	width: 100%;
+
+	.o-header {
+		width: 395px;
+
+		@include for-phone-only {
+			width: 270px;
+		}
+	}
+
+	.o-secondary-container {
+		@include for-phone-only {
+			width: 96%;
+		}
+
+		@include for-tablet-portrait-up {
+			width: 90%;
+		}
+
+		@include for-tablet-landscape-up {
+			width: 80%;
+		}
+
+		@include for-desktop-up {
+			width: 70%;
+		}
+	}
+
+	&-img-mont-saint-michel,
+	&-img-chateau-de-chenonceau {
+		@include image-float-left;
+		@include image-for-phone-without-float;
+	}
+
+	&-img-carcassonne {
+		@include image-float-right;
+		@include image-for-phone-without-float;
+	}
+}

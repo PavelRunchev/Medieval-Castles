@@ -5,127 +5,396 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Medieval Castles</title>
-    <link rel="icon" type="image/png" sizes="100x100" href="./../../../assets/castle-logo-design.png">
-    <link rel="shortcut icon" type="image/x-icon" sizes="100x100" href="./../../../assets/castle-logo-design.ico">
-    <link rel="stylesheet" type="text/css" href="./../../../css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./../../../assets/jquery.lazy/jquery.lazy.min.js"></script>
+    <link rel="icon" type="image/png" sizes="100x100" href="/assets/castle-logo-design.png">
+    <link rel="shortcut icon" type="image/x-icon" sizes="100x100" href="/assets/castle-logo-design.ico">
+
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-resource/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-resource/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-resource/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-resource/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-resource/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-resource/mdb.rtl.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-resource/mdb.lite.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body class="post spain-castles">
-    <div class="site">
-        <nav class="navigation main">
-    <a href="./" id="castle-logo">
-        <img src="./../../../assets/castle-logo-design.png">
-    </a>
+    <div class="site o-container">
+        <nav class="c-navigation">
+    <img class="c-navigation-logo" src="/assets/castle-logo-design.png" alt="logo">
     
-    <ul id="nav">
-        <li><a href="./../../../">Home</a></li>
-        <li><a href="./../../../about/">About</a></li>
-        <li><a href="./../../../signin/">Sign In</a></li>
-        <li><a href="./../../../signup/">Sign Up</a></li>
-        <li><a href="./../../../vote/">Vote Castles</a></li>
-        <li><a href="./../../../gallery/">Gallery</a></li>
+    <ul class="c-navigation-list">
+        <li class="c-navigation-item">
+            <a class="c-navigation-link" href="/">Home</a>
+        </li>
+        <li class="c-navigation-item">
+            <a class="c-navigation-link" href="/about/">About</a>
+        </li>
+        <li class="c-navigation-item">
+            <a 
+                class="c-navigation-link" href="/"
+                data-mdb-toggle="modal"
+                data-mdb-target="#sign-in"
+            >Sign In
+            </a>
+        </li>
+        <li class="c-navigation-item">
+            <a 
+                class="c-navigation-link" href="/"
+                data-mdb-toggle="modal"
+                data-mdb-target="#sign-up"
+            >Sign Up</a>
+        </li>
+        <li class="c-navigation-item">
+            <a class="c-navigation-link" href="/vote/">Vote</a>
+        </li>
+        <li class="c-navigation-item">
+            <a class="c-navigation-link" href="/gallery/">Gallery</a>
+        </li>
     </ul>
 
-    <i class="fas fa-bars" id="bars"></i>
-    <i class="fas fa-times" id="times"></i>
+    <!-- Modal -->
+    <div
+    class="modal fade "
+    id="sign-in"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    >
+        <div class="modal-dialog u-form" style="width: 380px;">
+            <div class="modal-content u-form-content">
+                <div class="modal-header d-flex u-form-header">
+                    <h5 class="modal-title flex-grow-1 text-center font-weight-bold u-form-title" id="exampleModalLabel">Sign In</h5>
+                    <i
+                        class="fas fa-times d-inline u-form-btn-close"
+                        data-mdb-dismiss="modal"
+                    ></i>
+                </div>
+                <div class="modal-body">
+                    <form class="c-sign-in-form py-3">
+                        <div class="u-form-input-container col-12">
+                            <input type="text" class="u-form-input" name="username" placeholder="" autocomplete="username"/>
+                            <i class="fas fa-user mr-3 u-form-icon"></i>
+                            <label for="username" class="label-text u-form-label">Your username</label>
+                        </div>
+                      
+                        <div class="u-form-input-container col-12">
+                            <input type="password" class="u-form-input" name="password1" placeholder="" autocomplete="new-password"/>
+                            <i class="fas fa-key mr-3 u-form-icon"></i>
+                            <label for="password1" class="label-text u-form-label">Password</label>
+                        </div>
+
+                        <div class="d-flex justify-content-around">
+                             <!-- Checkbox -->
+                            <div class="form-check d-flex justify-content-center mb-4">
+                                <input class="form-check-input me-2" type="checkbox" value="" checked/>
+                                <label class="form-check-label u-form-label-check">Remember me</label>
+                            </div>
+                            <div class="form-check d-flex justify-content-center mb-4">
+                                <a class="u-form-forgot-btn">Forgot password?</a>
+                            </div>
+                        </div>
+                       
+                    </form>
+                </div>
+                <div class="modal-footer u-form-footer">
+                    <button type="button" 
+                        class="o-btn u-form-btn c-sign-in-btn"
+                    ><i id="spinner" class="fas fa-spinner"></i> Sign In
+                    </button>
+                    <Button type="button" class="d-none u-form-btn-dissmis" data-mdb-dismiss="modal"></Button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div
+    class="modal fade "
+    id="sign-up"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    >
+        <div class="modal-dialog u-form">
+            <div class="modal-content u-form-content">
+                <div class="modal-header d-flex u-form-header">
+                    <h5 class="modal-title flex-grow-1 text-center font-weight-bold u-form-title" id="exampleModalLabel">Sign Up</h5>
+                    <i
+                        class="fas fa-times d-inline u-form-btn-close"
+                        data-mdb-dismiss="modal"
+                    ></i>
+                </div>
+                <div class="modal-body">
+                    <form class="c-sign-up-form">
+                        <div class="u-form-input-container col-12">
+                            <input type="text" class="u-form-input" name="name" placeholder="" autocomplete="name"/>
+                            <i class="fas fa-user mr-3 u-form-icon"></i>
+                            <label for="name" class="label-text u-form-label">Your name</label>
+                        </div>
+                        <div class="u-form-input-container col-12">
+                            <input type="text" class="u-form-input" name="your-username" placeholder="" autocomplete="username"/>
+                            <i class="fas fa-user mr-3 u-form-icon"></i>
+                            <label for="your-username" class="label-text u-form-label">Your username</label>
+                        </div>
+                        <div class="u-form-input-container col-12">
+                            <input type="text" class="u-form-input" name="email" placeholder="" autocomplete="email"/>
+                            <i class="fas fa-envelope mr-3 u-form-icon"></i>
+                            <label for="email" class="label-text u-form-label">Email</label>
+                        </div>
+                        <div class="u-form-input-container col-12">
+                            <input type="password" class="u-form-input" name="password" placeholder="" autocomplete="new-password"/>
+                            <i class="fas fa-key mr-3 u-form-icon"></i>
+                            <label for="password" class="label-text u-form-label">Password</label>
+                        </div>
+                        <div class="u-form-input-container col-12">
+                            <input type="password" class="u-form-input" name="password2" placeholder="" autocomplete="new-password"/>
+                            <i class="fas fa-key mr-3 u-form-icon"></i>
+                            <label for="password2" class="label-text u-form-label">Repeat password</label>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input me-2" type="checkbox" value="" checked/>
+                            <label class="form-check-label u-form-label-check">I have read and agree to the terms</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer u-form-footer">
+                    <button type="button" 
+                        class="o-btn u-form-btn c-sign-up-btn"
+                        data-mdb-dismiss="modal"
+                    ><i id="spinner" class="fas fa-spinner"></i> Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c-toastr">
+        <div class="c-toastr-title">
+            <h3 class="text-center"></h3>
+        </div>
+        <div class="c-toastr-body">
+            <i class="far fa-check-circle"></i>
+            <i class="far fa-times-circle"></i>
+        </div>
+    </div>
 </nav>
 
-        <header class="site-header">
-    <div class="site-branding">
-        <h1 class="site-title">
-            <a href="./../../../">Medieval Castles</a>
-        </h1>
-        <p class="site-description">This is simple project with Jekyll!</p>
+        <header class="c-header">
+    <div class="c-header-container">
+        <h1 class="e-h1 c-header-title">Medieval Castles</h1>
+        <h4 class="e-h4">This is simple project with Jekyll!</h4>
     </div>
 </header>
 
         <main class="site-content">
-                <section class="post-spain">
-    <div class="spain-castles">
-        <h2>Top 3 of Spain Castles</h2>
-        <article class="la-mota">
-            <img src="./../../../assets/Spain Castles/castle_of_la_mota.jpg" alt="photo" />
-            <h3>1. Castle of La Mota</h3>
-            <p>The Castle of La Mota or Castillo de La Mota is a medieval fortress, located in the town of Medina del Campo, province of Valladolid, Spain. It is so named because of its location on an elevated hill, a mota (in Spanish), from where it dominates the town and surrounding land. The adjacent town came to be surrounded by an expanding series of walls in subsequent years, of which little remains. The Castle's main feature is the large outer barbican. The interior castle has a trapezoidal plan, with 4 towers and a square yard. It has a large square keep tower, and an inner curtain wall that was used for archers. In olden times, people entered the castle over a drawbridge. This medieval fortress has been reconstructed. At one time it was a well-known prison, housing such people as Hernando Pizarro, a conqueror of Peru, and Cesare Borgia.</p>
+                <section class="c-post-spain-castles">
+    <div class="o-header">
+        <h2 class="e-h2">Top 3 of Spain Castles</h2>
+    </div>
+    <div class="o-secondary-container">
+        <article class="o-castle-container">
+            <i class="fas fa-eye u-vision-left"></i>
+            <img class="o-picture c-post-spain-castles-img-la-mota" src="/assets/Spain Castles/castle_of_la_mota.jpg" alt="photo" data-mdb-toggle="modal" data-mdb-target="#la-mota" />
+            <h3 class="e-h3">1. Castle of La Mota</h3>
+            <p class="e-p">The Castle of La Mota or Castillo de La Mota is a medieval fortress, located in the town of Medina del Campo, province of Valladolid, Spain. It is so named because of its location on an elevated hill, a mota (in Spanish), from where it dominates the town and surrounding land. The adjacent town came to be surrounded by an expanding series of walls in subsequent years, of which little remains. The Castle's main feature is the large outer barbican. The interior castle has a trapezoidal plan, with 4 towers and a square yard. It has a large square keep tower, and an inner curtain wall that was used for archers. In olden times, people entered the castle over a drawbridge. This medieval fortress has been reconstructed. At one time it was a well-known prison, housing such people as Hernando Pizarro, a conqueror of Peru, and Cesare Borgia.
+            </p>
+            <!-- Modal -->
+            <div class="modal fade" id="la-mota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content o-modal-background">
+                        <div class="modal-header bg-dark">
+                            <h5 class="modal-title mx-auto text-light font-weight-bold" id="exampleModalLabel">
+                                Castle of La Mota
+                            </h5>
+                        </div>
+                        <div class="modal-body">
+                            <img class="o-picture" src="/assets/Spain Castles/castle_of_la_mota.jpg" alt="photo" style="width: 100%;" />
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn o-btn mx-auto" data-mdb-dismiss="modal">Close           
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
-        <article class="olite">
-            <img src="./../../../assets/Spain Castles/olite_castle.jpg" alt="photo" />
-            <h3>2. Olite Castle</h3>
-            <p>A trip to Olite Castle is to experience a different royalty culture in Spain, that of the kingdom of Navarre in the northern part of the country. Also known as the Palacio Real de Olite, the castle was built on first century Roman ruins, though the castle’s construction did not take place until several centuries later. Various monarchs added to it over the years, using a variety of architectural styles, with towers, courtyards and gardens. The castle fell into disrepair, though the Spanish government has been restoring it since 1937. The fortification is both castle and palace, although it was built more like a courtier building to fulfill a military function. Since the 13th-century the Castle of Olite was called as Palace of the King of Navarre. Then the palace was housing the Navarrese court from the 14th until 16th centuries, Since the annexation (integration) of the kingdom of Navarre for the Crown of Castile in 1512 began the decline of the castle and therefore its practically neglect and deterioration. At that time it was an official residence for the Viceroys of Navarre.</p>
+        <article class="o-castle-container">
+            <i class="fas fa-eye u-vision-right"></i>
+            <img class="o-picture c-post-spain-castles-img-olite" src="/assets/Spain Castles/olite_castle.jpg" alt="photo" data-mdb-toggle="modal" data-mdb-target="#olite" />
+            <h3 class="e-h3">2. Olite Castle</h3>
+            <p class="e-p">A trip to Olite Castle is to experience a different royalty culture in Spain, that of the kingdom of Navarre in the northern part of the country. Also known as the Palacio Real de Olite, the castle was built on first century Roman ruins, though the castle’s construction did not take place until several centuries later. Various monarchs added to it over the years, using a variety of architectural styles, with towers, courtyards and gardens. The castle fell into disrepair, though the Spanish government has been restoring it since 1937. The fortification is both castle and palace, although it was built more like a courtier building to fulfill a military function. Since the 13th-century the Castle of Olite was called as Palace of the King of Navarre. Then the palace was housing the Navarrese court from the 14th until 16th centuries, Since the annexation (integration) of the kingdom of Navarre for the Crown of Castile in 1512 began the decline of the castle and therefore its practically neglect and deterioration. At that time it was an official residence for the Viceroys of Navarre.
+            </p>
+            <!-- Modal -->
+            <div class="modal fade" id="olite" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content o-modal-background">
+                        <div class="modal-header bg-dark">
+                            <h5 class="modal-title mx-auto text-light font-weight-bold" id="exampleModalLabel">
+                                Olite Castle
+                            </h5>
+                        </div>
+                        <div class="modal-body">
+                            <img class="o-picture" src="/assets/Spain Castles/olite_castle.jpg" alt="photo" style="width: 100%;" />
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn o-btn mx-auto" data-mdb-dismiss="modal">Close           
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
-        <article class="alcazar">
-            <img src="./../../../assets/Spain Castles/alcazar_of_segovia.jpg" alt="photo" />
-            <h3>3. Alcazar of Segovia</h3>
-            <p>The Alcázar of Segovia, like many fortifications in Spain, started off as Roman fort, but apart from the foundations, little of the original structure remains. A Muslim era fort, which was itself largely replaced by the present structure, was built by the Berber Almoravid dynasty. The first reference to this particular "alcázar" was in 1120, around 32 years after the city of Segovia returned to Christian hands (during the time when King Alfonso VI reconquered lands to the south of the Duero river down to Toledo and beyond). The shape and form of the Alcázar was not known until the reign of King Alfonso VIII (1155–1214), however early documentation mentioned a wooden stockade fence. It can be concluded that prior to Alfonso VIII's reign, the Muslim era structure was no more than a wooden fort built over the old Roman foundations. Alfonso VIII and his wife, Eleanor of England, made this alcázar their principal residence and much work was carried out to erect the beginnings of the stone fortification we see today. In 1474, the Alcázar played a major role in the rise of Queen Isabella I. On 12 December news of the King Henry IV's death in Madrid reached Segovia and Isabella immediately took refuge within the walls of the Alcázar where she received the support of Andres Cabrera and Segovia's council. She was enthroned the next day as Queen of Castile and León. The next major renovation at the Alcázar was conducted by King Philip II after his marriage to Anna of Austria. He added the sharp slate spires to reflect the castles of central Europe. In 1587, architect Francisco de Morar completed the main garden and the School of Honor areas of the castle.</p>
+        <article class="o-castle-container">
+            <i class="fas fa-eye u-vision-left"></i>
+            <img class="o-picture c-post-spain-castles-img-alcazar-of-segovia" src="/assets/Spain Castles/alcazar_of_segovia.jpg" alt="photo" data-mdb-toggle="modal" data-mdb-target="#alcazar-of-segovia" />
+            <h3 class="e-h3">3. Alcazar of Segovia</h3>
+            <p class="e-p">The Alcázar of Segovia, like many fortifications in Spain, started off as Roman fort, but apart from the foundations, little of the original structure remains. A Muslim era fort, which was itself largely replaced by the present structure, was built by the Berber Almoravid dynasty. The first reference to this particular "alcázar" was in 1120, around 32 years after the city of Segovia returned to Christian hands (during the time when King Alfonso VI reconquered lands to the south of the Duero river down to Toledo and beyond). The shape and form of the Alcázar was not known until the reign of King Alfonso VIII (1155–1214), however early documentation mentioned a wooden stockade fence. It can be concluded that prior to Alfonso VIII's reign, the Muslim era structure was no more than a wooden fort built over the old Roman foundations. Alfonso VIII and his wife, Eleanor of England, made this alcázar their principal residence and much work was carried out to erect the beginnings of the stone fortification we see today. In 1474, the Alcázar played a major role in the rise of Queen Isabella I. On 12 December news of the King Henry IV's death in Madrid reached Segovia and Isabella immediately took refuge within the walls of the Alcázar where she received the support of Andres Cabrera and Segovia's council. She was enthroned the next day as Queen of Castile and León. The next major renovation at the Alcázar was conducted by King Philip II after his marriage to Anna of Austria. He added the sharp slate spires to reflect the castles of central Europe. In 1587, architect Francisco de Morar completed the main garden and the School of Honor areas of the castle.
+            </p>
+            <!-- Modal -->
+            <div class="modal fade" id="alcazar-of-segovia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content o-modal-background">
+                        <div class="modal-header bg-dark">
+                            <h5 class="modal-title mx-auto text-light font-weight-bold" id="exampleModalLabel">
+                                Alcazar of Segovia
+                            </h5>
+                        </div>
+                        <div class="modal-body">
+                            <img class="o-picture" src="/assets/Spain Castles/alcazar_of_segovia.jpg" alt="photo" style="width: 100%;" />
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="button" class="btn o-btn mx-auto" data-mdb-dismiss="modal">Close           
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
     </div> 
 </section>
 
         </main>
 
-        <footer class="site-footer">
-    <section class="footer logo">
-        <img src="./../../../assets/creative design.jpg" alt="logo">
-        <img src="./../../../assets/logotipo-harmony.jpg" alt="logo">
-        <img src="./../../../assets/colorwise-owl-creative-logo-designer.png" alt="logo">
-        <img src="./../../../assets/phoenix-logo.jpg" alt="logo">
-    </section>
+        <footer class="c-footer">
+    <section class="c-footer-container">
+        <article class="c-footer-contact-us">
+                <h4 class="c-footer-title">Contact us</h4>
+                    <p class="c-footer-contact-us-content">
+                        <i class="fas fa-map-marker-alt"></i>&nbsp; Tintqva Avenue 15-17
+                    </p>
+                    <p class="c-footer-contact-us-content">
+                        <i class="fas fa-globe-europe"></i>&nbsp; Sofia, 1113 BG
+                    </p>
+                    <p class="c-footer-contact-us-content">
+                        <i class="far fa-clock"></i>
+                        &nbsp; Mon - Sat <span class="e-span">9.00</span> - <span class="e-span">22.00</span>
+                    </p>
+                    <p class="c-footer-contact-us-content">
+                        <i class="fas fa-calendar-week"></i>
+                        &nbsp; Sunday - <span class="e-span">CLOSED</span>
+                    </p>
+                    <p class="c-footer-contact-us-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        &nbsp; 02 047 557 - 
+                        <span class="e-span">Free call</span>
+                    </p>
+        </article>
 
-    <section class="footer services">
-        <article class="contacts">
-                <h4>Contact us</h4>
-                <div class="avenue">
-                    <p><i class="fas fa-map-marker-alt"></i>&nbsp; Tintqva Avenue 15-17</p>
-                    <p>Sofia, 1113 BG.</p>
-                </div>
-                <div class="week">
-                    <p><i class="far fa-clock"></i>&nbsp; Mon - Sat 9.00 - 22.00 </p>
-                    <p>Sunday CLOSED</p>
-                </div>
-                <div class="phone">
-                    <p><i class="fas fa-phone"></i>&nbsp; 02 047 557 Free call</p>
-                </div>
+        <article class="c-footer-partners">
+            <h4 class="c-footer-title c-footer-partners-title">Partners</h4>
+            <div class="c-footer-partners-container">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-gitlab"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+            <p class="my-3 c-footer-noncommercial-container">
+                <i class="fab fa-creative-commons-nc"></i>&nbsp; <span class="font-weight-bold">- NonCommercial!</span>
+            </p>
         </article>
      
-        <article class="awesome">
-            <h4>Connect</h4>
-            <div>The Project is hosted to GitHub!</div>
-            <i class="fab fa-github"></i>
-            <i class="fab fa-gitlab"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin-in"></i>
-            <div><div class="fas fa-balance-scale"></div>&nbsp; MIT License.</div>
-        </article>
-
-        <article class="links">
-            <h4>Need help?</h4>
-            <ul>
-                <li><a href="./../../../signin/">My Account</a></li>
-                <li><a href="./../../../special-thanks/">Special Thanks</a></li>
-                <li><a href="./../../../contacts/">Contact Us</a></li>
-                <li><a href="./../../../support/">Support</a></li>
-                <li><a href="./../../../services/">Services</a></li>
+        <article class="c-footer-links">
+            <h4 class="c-footer-title c-footer-links-title">Contacts</h4>
+            <ul class="c-footer-links-list">
+                <li class="c-footer-links-item">
+                    <a class="c-footer-links-link" href="/contacts/">Contact Us</a>
+                </li>
+                <li class="c-footer-links-item">
+                    <a class="c-footer-links-link" href="/my-build/">My Build</a>
+                </li>
+                <li class="c-footer-links-item">
+                    <a class="c-footer-links-link" href="/support/">Support</a>
+                </li>
+                <li class="c-footer-links-item">
+                    <a class="c-footer-links-link" href="/services/">Services</a>
+                </li>
             </ul>
         </article>
-        
-        <article class="subscribe">
-            <h4>Subscribers</h4>
+
+        <article class="c-footer-subscribe">
+            <h4 class="c-footer-title">Subscribe</h4>
             <p>Make sure you dont miss interesting happening by joining our beautiful castles site!</p>
-            <label for="email">
-                <input type="email" id="email" placeholder="Your email adress">
-                <input type="submit" value="Subscribe" id="subscribe">
-            </label>
+            <form class="c-footer-form">
+                <input type="email" class="c-footer-input" placeholder="Your email adress">
+                <button 
+                    type="button" 
+                    class="c-footer-subscribe-btn"
+                    data-mdb-toggle="modal"
+                    data-mdb-target="#subscribe"
+                >Subscribe</button>
+
+                <!-- Modal -->
+                <div
+                    class="modal fade"
+                    id="subscribe"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                >
+                    <div class="modal-dialog">
+                    <div class="modal-content bg-light">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-dark mx-auto c-footer-subscribe-modal-title" id="exampleModalLabel"></h5>
+                        </div>
+                            <div class="modal-body text-dark text-center c-footer-subscribe-modal-body"></div>
+                            <div class="modal-footer">
+                                <button type="button" 
+                                    class="btn o-btn c-footer-form-btn mx-auto" data-mdb-dismiss="modal"
+                                    data-mdb-ripple-color="dark"
+                                >Thanks</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </article>
     </section>
     
-    <section class="footer copyright">
-        <div>&copy; 2018 Medieval Castles, All Rights Reserved!</div>
+    <section class="c-footer-copyright">
+        <div>&copy; 2018-2021 Medieval Castles. All Rights Reserved!</div>
         <div>Powered by Pavel Runchev</div>
     </section>
 </footer>
     </div>
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/assets/bootstrap-resource/bootstrap-js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-resource/bootstrap-js/mdb.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-resource/bootstrap-js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-resource/bootstrap-js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-resource/bootstrap-js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap-resource/bootstrap-js/scrolling.js"></script>
+
+    <script type="text/javascript" src="/assets/subscribe.js"></script>
+    <script type="text/javascript" src="/assets/ease-loading.js"></script>
+    <script type="text/javascript" src="/assets/my-label-effect.js"></script>
+    <script type="text/javascript" src="/assets/my-toastr.js"></script>
+    
 </body>
 </html>

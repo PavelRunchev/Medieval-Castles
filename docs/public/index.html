@@ -1,156 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Medieval Castles</title>
-    <link rel="icon" type="image/png" sizes="100x100" href="/assets/castle-logo-design.png">
-    <link rel="shortcut icon" type="image/x-icon" sizes="100x100" href="/assets/castle-logo-design.ico">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../assets/jquery.lazy/jquery.lazy.min.js"></script>
-</head>
-<body class="home">
-    <div class="site">
-        <nav class="navigation main">
-    <a href="/" id="castle-logo">
-        <img src="/assets/castle-logo-design.png">
-    </a>
-    
-    <ul id="nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/signin/">Sign In</a></li>
-        <li><a href="/signup/">Sign Up</a></li>
-        <li><a href="/vote/">Vote Castles</a></li>
-        <li><a href="/gallery/">Gallery</a></li>
-    </ul>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-    <i class="fas fa-bars" id="bars"></i>
-    <i class="fas fa-times" id="times"></i>
-</nav>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.9/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.9/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.2.9/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.2.9/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.2.9/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.2.9/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.2.9/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.2.9/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.2.9/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-        <header class="site-header">
-    <div class="site-branding">
-        <h1 class="site-title">
-            <a href="/">Medieval Castles</a>
-        </h1>
-        <p class="site-description">This is simple project with Jekyll!</p>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-</header>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-        <main class="site-content">
-                	<h3>Beautiful Castles</h3>
-	<p>Selected to view them!</p>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-<ul class="listing posts">
-	
-	<li>
-		<a href="/2018/11/22/Spain-castles.html">
-			<article>
-				<p class="title">Spain Castles!</p>
-				<p>Blog article to castles in country</p>
-				<span class="date">date - 22 Nov 2018</span>
-			</article>
-		</a>
-	</li>
-	
-	<li>
-		<a href="/2018/11/22/France-castles.html">
-			<article>
-				<p class="title">France Castles!</p>
-				<p>Blog article to castles in country</p>
-				<span class="date">date - 22 Nov 2018</span>
-			</article>
-		</a>
-	</li>
-	
-	<li>
-		<a href="/2018/11/22/Germany-castles.html">
-			<article>
-				<p class="title">Germany Castles!</p>
-				<p>Blog article to castles in country</p>
-				<span class="date">date - 22 Nov 2018</span>
-			</article>
-		</a>
-	</li>
-	
-	<li>
-		<a href="/2018/11/22/England-castles.html">
-			<article>
-				<p class="title">England Castles!</p>
-				<p>Blog article to castles in country</p>
-				<span class="date">date - 22 Nov 2018</span>
-			</article>
-		</a>
-	</li>
-	
-</ul>
-        </main>
-
-        <footer class="site-footer">
-    <section class="footer logo">
-        <img src="/assets/creative design.jpg" alt="logo">
-        <img src="/assets/logotipo-harmony.jpg" alt="logo">
-        <img src="/assets/colorwise-owl-creative-logo-designer.png" alt="logo">
-        <img src="/assets/phoenix-logo.jpg" alt="logo">
-    </section>
-
-    <section class="footer services">
-        <article class="contacts">
-                <h4>Contact us</h4>
-                <div class="avenue">
-                    <p><i class="fas fa-map-marker-alt"></i>&nbsp; Tintqva Avenue 15-17</p>
-                    <p>Sofia, 1113 BG.</p>
-                </div>
-                <div class="week">
-                    <p><i class="far fa-clock"></i>&nbsp; Mon - Sat 9.00 - 22.00 </p>
-                    <p>Sunday CLOSED</p>
-                </div>
-                <div class="phone">
-                    <p><i class="fas fa-phone"></i>&nbsp; 02 047 557 Free call</p>
-                </div>
-        </article>
-     
-        <article class="awesome">
-            <h4>Connect</h4>
-            <div>The Project is hosted by GitHub!</div>
-            <i class="fab fa-github"></i>
-            <i class="fab fa-gitlab"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin-in"></i>
-            <div><div class="fas fa-balance-scale"></div>&nbsp; MIT License.</div>
-        </article>
-
-        <article class="links">
-            <h4>Need help?</h4>
-            <ul>
-                <li><a href="/signin/">My Account</a></li>
-                <li><a href="/special-thanks/">Special Thanks</a></li>
-                <li><a href="/contacts/">Contact Us</a></li>
-                <li><a href="/support/">Support</a></li>
-                <li><a href="/services/">Services</a></li>
-            </ul>
-        </article>
-        
-        <article class="subscribe">
-            <h4>Subscribers</h4>
-            <p>Make sure you dont miss interesting happening by joining our beautiful castles site!</p>
-            <label for="email">
-                <input type="email" id="email" placeholder="Your email adress">
-                <input type="submit" value="Subscribe" id="subscribe">
-            </label>
-        </article>
-    </section>
-    
-    <section class="footer copyright">
-        <div>&copy; 2018 Medieval Castles, All Rights Reserved!</div>
-        <div>Powered by Pavel Runchev</div>
-    </section>
-</footer>
-    </div>
-   
-</body>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>

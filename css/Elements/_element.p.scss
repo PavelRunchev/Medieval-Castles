@@ -1,0 +1,16 @@
+
+.e-p {
+	font-weight: normal;
+	
+	@include for-phone-only {
+		font-size: 16px;
+	}
+
+	@include for-tablet-portrait-up {
+		font-size: 18px;
+	}
+
+	@include for-tablet-landscape-up {
+		font-size: 20px;
+	}
+}

@@ -1,0 +1,20 @@
+
+.c-header {
+	width: 100%;
+	height: 100%;
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	background: linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0,0.8)), url('../../assets/neuschwanstein.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&-title {
+		margin: 10% 0 5% 0;
+		font-size: 60px;
+	}
+
+	.e-h4 {
+		margin-bottom: 4%;
+	}
+}
