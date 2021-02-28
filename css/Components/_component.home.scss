@@ -4,10 +4,39 @@
 	grid-row: 3 / 4;
 	width: 100%;
 	background-color: $background-primary-color;
-	padding: 2% 0;
+	padding: 3% 0 6% 0;
+
+	display: grid;
+	grid-template-columns: 100%;
+	@include for-phone-only {
+		grid-template-rows: auto auto 1500px;
+	}
+
+	@include for-tablet-portrait-up {
+		grid-template-rows: auto auto 800px;
+	}
+
+	@include for-tablet-landscape-up {
+		grid-template-rows: auto auto 900px;
+	}
+
+	@include for-desktop-up {
+		grid-template-rows: auto auto 550px;
+	}
+	
 
 	&-container-title {
 		width: 310px;
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+
+		@include for-phone-only {
+			width: 200px;
+		}
+
+		@include for-tablet-portrait-up {
+			width: 290px;
+		}
 	}
 
 	.e-h2 {
@@ -20,75 +49,131 @@
 		color: $third-color;
 		margin: 2% 0;
 		font-style: italic;
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
 	}
 
 	&-list {
+		grid-column: 1 / 2;
+		grid-row: 3 / 4;
+	
 		list-style: none;
 		width: 100%;
 		margin: 2% 0;
 		padding: 0;
-		display: flex;
-		flex-flow: row wrap;
+		display: grid;
+		align-items: center;
+		align-content: space-around;
 		justify-content: space-around;
+
+		@include for-phone-only {
+			grid-template-columns: 96%;
+			grid-template-rows: 350px 350px 350px 350px;
+			align-content: space-around;
+			justify-content: center;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-template-columns: 290px 290px;
+			grid-template-rows: 350px 350px;
+		}
+
+		@include for-tablet-landscape-up {
+			grid-template-columns: 350px 350px;
+			grid-template-rows: 400px 400px;
+		}
+
+		@include for-desktop-up {
+			grid-template-columns: 290px 290px 290px 290px;
+			grid-template-rows: 400px;
+		}
+
+		@include for-big-desktop-up {
+			grid-template-columns: 350px 350px 350px 350px;
+			grid-template-rows: 450px;
+		}
 	}
 
 	&-item {
+		width: 100%;
+		height: 100%;
 		padding: 0 2%;
 		border-radius: 5px;
 		color: $third-color;
 		@include primary-box-shadow-black;
-
-		@include for-phone-only {
-			width: 90%;
-			height: 400px;
-			margin: 5% 0;
-		}
-
-		@include for-tablet-portrait-up {
-			width: 280px;
-			height: 400px;
-			margin: 5% 0;
-		}
-
-		@include for-tablet-landscape-up {
-			width: 20%;
-			height: 300px;
-			margin: 2% 0;
-		}
-
-		@include for-desktop-up {
-			width: 20%;
-			height: 400px;
-			margin: 2% 0;
-		}
-
-		@include for-big-desktop-up {
-			height: 600px;
-			margin: 2% 0;
-		}
 	}
 
 	&-item:nth-child(1) {
 		@include card-hover-effect-white(url('../assets/Spain Castles/castle_of_la_mota.jpg'));
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
 	}
 
 	&-item:nth-child(2) {
 		@include card-hover-effect-white(url('../assets/France Castles/montSaintMichel2.jpg'));
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
+
+		@include for-desktop-up {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
 	}
 
 	&-item:nth-child(3) {
 		@include card-hover-effect-white(url('../assets/Germany Castles/hohenzollern_castle.jpg'));
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		@include for-desktop-up {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+		}
 	}
 
 	&-item:nth-child(4) {
 		@include card-hover-effect-white(url('../assets/England Castles/bodiam.jpg'));
+
+		@include for-phone-only {
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+		}
+
+		@include for-tablet-portrait-up {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+
+		@include for-desktop-up {
+			grid-column: 4 / 5;
+			grid-row: 1 / 2;
+		}
 	}
 
 	&-link {
 		text-decoration: none;
 		cursor: pointer;
 		width: 100%;
-		height: 300px;
+		height: 100%;
 	}
 
 	&-card {
@@ -115,4 +200,5 @@
 	&-card-date {
 		@include card-content(22px, 5%, 0);
 	}
+
 }

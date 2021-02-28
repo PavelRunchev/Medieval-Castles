@@ -1,5 +1,7 @@
 
 .c-navigation {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
 	width: 100%;
 
 	@include for-phone-only {
